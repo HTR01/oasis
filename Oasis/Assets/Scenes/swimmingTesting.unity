@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 858532077}
   - component: {fileID: 858532076}
   - component: {fileID: 858532075}
-  m_Layer: 8
+  m_Layer: 4
   m_Name: WaterTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
