@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 858532077}
   - component: {fileID: 858532076}
   - component: {fileID: 858532075}
-  m_Layer: 8
+  m_Layer: 4
   m_Name: WaterTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ PrefabInstance:
     - target: {fileID: 2269957651655226044, guid: 8ebafd25458e0ae4897e4a34e39b66ad,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 5.3
       objectReference: {fileID: 0}
     - target: {fileID: 2269957651655226044, guid: 8ebafd25458e0ae4897e4a34e39b66ad,
         type: 3}
