@@ -74,6 +74,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
+  cam: {fileID: 2269957652747618271}
 --- !u!1 &2269957651712186103
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,3 +281,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 100
   playerBody: {fileID: 2269957651655226044}
+  Ahead: {x: 0, y: 0, z: 0}
+  Side: {x: 0, y: 0, z: 0}

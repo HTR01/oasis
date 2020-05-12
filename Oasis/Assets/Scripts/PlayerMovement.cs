@@ -10,19 +10,44 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
 
-    Vector3 velocity;
+    Vector3 velocity, move;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
     bool isGrounded;
-    
+
+
+
+    bool water;
+    GameObject player;
+    public GameObject cam;
+
+    private void Start()
+    {
+        player = this.gameObject;
+    }
+
+
     void Update()
+    {
+        if (water == false)
+        {
+            groundMove();
+        }
+        else
+        {
+            Swimming();
+        }
+    }
+
+
+    void groundMove()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if(isGrounded && velocity.y < 0)
+        if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
@@ -31,11 +56,11 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z;
+        move = transform.right * x + transform.forward * z;
 
         controller.Move(move * speed * Time.deltaTime);
 
-        if(Input.GetButton("Jump") && isGrounded)
+        if (Input.GetButton("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
@@ -43,5 +68,30 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    void Swimming()
+    {
+        Vector3 moveX = Input.GetAxis("Vertical") * cam.GetComponent<MouseLook>().Ahead;
+        Vector3 moveZ = Input.GetAxis("Horizontal") * cam.GetComponent<MouseLook>().Side;
+
+        move = moveX + moveZ;
+        controller.Move(move * speed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 4)
+        {
+            water = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == 4)
+        {
+            water = false;
+        }
     }
 }
