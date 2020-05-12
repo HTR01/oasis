@@ -9,7 +9,7 @@ public class Minimap : MonoBehaviour
     private void LateUpdate()
     {
         Vector3 newPosition = player.position;
-        newPosition.y = transform.position.y;
+        newPosition.y = player.position.y + 5;
         transform.position = newPosition;
 
         transform.rotation = Quaternion.Euler(90f, player.eulerAngles.y, 0f);
