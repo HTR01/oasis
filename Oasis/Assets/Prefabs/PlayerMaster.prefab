@@ -67,7 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 2269957651655225923}
   speed: 12
-  gravity: -9.81
+  gravity: -19.62
   jumpHeight: 3
   groundCheck: {fileID: 2269957651712186102}
   groundDistance: 0.4
@@ -162,7 +162,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 36257d52b61330244a4684ee125bcd78, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
