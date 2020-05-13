@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         move = moveX + moveZ;
         controller.Move(move * speed * Time.deltaTime);
 
-        print(moveX.z);
+
     }
 
     private void OnTriggerEnter(Collider other)

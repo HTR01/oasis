@@ -17,35 +17,61 @@ public class Achievements : MonoBehaviour
     public static bool OBJCollected;
     public int ach01Code;
 
+    float timer = 5;
+    float timerStart = 5;
+
 
     // Update is called once per frame
     void Update()
     {
         ach01Code = PlayerPrefs.GetInt("Ach01");
 
-        if(OBJCollected == true && ach01Code != 111)
+        if (OBJCollected == true && ach01Code != 111)
         {
-            StartCoroutine(TriggerAch01());
+            Ach01();
         }
+        if (timer <= 0)
+        {
+            ResetUI();
+        }
+
+    }
+
+    private void FixedUpdate()
+    {
+        if (achActive == true)
+        {
+            timer -= Time.deltaTime;
+        }
+        //print(timer);
     }
 
     //copy paste and edit me for additional achievements
-    IEnumerator TriggerAch01()
+    
+
+
+
+    void Ach01()
     {
         achActive = true;
         ach01Code = 111;
-        PlayerPrefs.SetInt("Ach0101", ach01Code);
+        PlayerPrefs.SetInt("Ach01", ach01Code);
         //achSound.Play();
         ach01Img.SetActive(true);
         achTitle.GetComponent<Text>().text = "Achievement Name";
         achDesc.GetComponent<Text>().text = "Achievement Description";
         achNote.SetActive(true);
-        yield return new WaitForSeconds(5);
         //resetUI
+    }
+
+    void ResetUI()
+    {
+        achActive = false;
         ach01Img.SetActive(false);
+        achNote.SetActive(false);
         achTitle.GetComponent<Text>().text = null;
         achDesc.GetComponent<Text>().text = null;
-        achNote.SetActive(false);
-        achActive = false;
+        timer = timerStart;
+        print("hit");
     }
 }
