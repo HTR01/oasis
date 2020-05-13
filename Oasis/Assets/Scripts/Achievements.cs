@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Achivements : MonoBehaviour
+public class Achievements : MonoBehaviour
 {
 
     //Universal Variables
