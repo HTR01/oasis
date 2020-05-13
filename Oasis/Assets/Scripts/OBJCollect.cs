@@ -11,7 +11,7 @@ public class OBJCollect : MonoBehaviour
             if (col.name == "Cube1")
             {
                 Destroy(col.gameObject);
-                Achivements.OBJCollected = true;
+                Achievements.OBJCollected = true;
             }
         }
     }
