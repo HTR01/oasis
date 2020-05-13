@@ -86,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.layer == 4)
         {
