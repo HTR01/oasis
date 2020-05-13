@@ -23,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
     bool water;
     GameObject player;
     public GameObject cam;
+    float sprint;
+    float acceleration = 1.5f;
+
 
     private void Start()
     {
@@ -72,11 +75,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Swimming()
     {
-        Vector3 moveX = Input.GetAxis("Vertical") * cam.GetComponent<MouseLook>().Ahead;
+        float moveSprint = Input.GetAxis("Vertical") * (1 + Input.GetAxis("Sprint") * acceleration);
+        Vector3 moveX = moveSprint * cam.GetComponent<MouseLook>().Ahead;
         Vector3 moveZ = Input.GetAxis("Horizontal") * cam.GetComponent<MouseLook>().Side;
 
+        
         move = moveX + moveZ;
         controller.Move(move * speed * Time.deltaTime);
+
+        print(moveX.z);
     }
 
     private void OnTriggerStay(Collider other)
