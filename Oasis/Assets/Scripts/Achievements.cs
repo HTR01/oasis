@@ -21,6 +21,11 @@ public class Achievements : MonoBehaviour
     float timerStart = 5;
 
 
+    private void Start()
+    {
+        PlayerPrefs.SetInt("Ach01", 0);
+    }
+
     // Update is called once per frame
     void Update()
     {
