@@ -43,7 +43,6 @@ public class Achievements : MonoBehaviour
         {
             timer -= Time.deltaTime;
         }
-        //print(timer);
     }
 
     //copy paste and edit me for additional achievements
