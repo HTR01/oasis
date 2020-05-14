@@ -17,6 +17,7 @@ TagManager:
   - 
   - Ground
   - Player
+  - FOW
   - 
   - 
   - 
@@ -36,10 +37,12 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - FoWMain
+  - FoWSecond
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: FoW
+    uniqueID: 1941090321
     locked: 0
