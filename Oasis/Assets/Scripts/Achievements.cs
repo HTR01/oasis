@@ -24,6 +24,7 @@ public class Achievements : MonoBehaviour
     private void Start()
     {
         PlayerPrefs.SetInt("Ach01", 0);
+        OBJCollected = false;
     }
 
     // Update is called once per frame
