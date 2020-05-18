@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity, move;
 
+    public static float moveTotal;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -35,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        moveTotal = move.x + move.y + move.z;
+        print(moveTotal);
         if (water == false)
         {
             groundMove();
