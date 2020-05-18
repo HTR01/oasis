@@ -9,6 +9,7 @@ public class analyticsStart : MonoBehaviour
     void Start()
     {
         GameAnalytics.Initialize();
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "Tutorial");
     }
 
     // Update is called once per frame

@@ -34,7 +34,7 @@ MonoBehaviour:
   SelectedPlatformOrganization:
   - Yoobee
   SelectedPlatformStudio:
-  - HTR[01] Studios
+  - HTR01 Studios
   SelectedPlatformGame:
   - Oasis
   SelectedPlatformGameID: 778c0100
@@ -63,7 +63,7 @@ MonoBehaviour:
   ResourceItemTypes: []
   ResourceCurrencies: []
   LastCreatedGamePlatform: -1
-  Platforms: 0b000000
+  Platforms: 02000000
   CurrentInspectorState: 1
   ClosedHints: 
   DisplayHints: 0
