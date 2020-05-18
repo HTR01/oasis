@@ -12,7 +12,6 @@ public class OBJCollect : MonoBehaviour
         {
             if (col.name == "Cube1")
             {
-                
                 GameAnalytics.NewDesignEvent("Achievement", 1);
                 GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Tutorial");
                 Destroy(col.gameObject);
