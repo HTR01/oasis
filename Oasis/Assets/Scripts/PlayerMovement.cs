@@ -71,6 +71,16 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        if (Input.GetButtonDown("SlowWalk"))
+        {
+            speed = speed / 2;
+        }
+
+        if (Input.GetButtonUp("SlowWalk"))
+        {
+            speed = speed * 2;
+        }
     }
 
     void Swimming()
