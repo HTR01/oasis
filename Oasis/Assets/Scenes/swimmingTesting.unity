@@ -218,8 +218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53370998b8ad9cc4391775b05307c34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FPCamera: {fileID: 656511974}
-  TPCamera: {fileID: 766063027}
+  FPCamera: {fileID: 656511978}
+  TPCamera: {fileID: 766063031}
 --- !u!108 &190052586
 Light:
   m_ObjectHideFlags: 0
@@ -737,9 +737,9 @@ Canvas:
   m_SortingLayerID: 1941090321
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &656511974 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2269957652747618271, guid: 8ebafd25458e0ae4897e4a34e39b66ad,
+--- !u!20 &656511978 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2269957652747618269, guid: 8ebafd25458e0ae4897e4a34e39b66ad,
     type: 3}
   m_PrefabInstance: {fileID: 2269957652450984643}
   m_PrefabAsset: {fileID: 0}
@@ -761,7 +761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &766063028
 Transform:
   m_ObjectHideFlags: 0
@@ -792,8 +792,8 @@ MonoBehaviour:
   playerBody: {fileID: 1129654099}
   Ahead: {x: 0, y: 0, z: 0}
   Side: {x: 0, y: 0, z: 0}
-  negative: -20
-  positive: 10
+  negative: -25
+  positive: 25
 --- !u!81 &766063030
 AudioListener:
   m_ObjectHideFlags: 0
@@ -801,7 +801,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766063027}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &766063031
 Camera:
   m_ObjectHideFlags: 0
@@ -809,7 +809,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766063027}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -1913,6 +1913,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerMaster
       objectReference: {fileID: 0}
+    - target: {fileID: 2269957652747618271, guid: 8ebafd25458e0ae4897e4a34e39b66ad,
+        type: 3}
+      propertyPath: m_Name
+      value: FP Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269957652747618271, guid: 8ebafd25458e0ae4897e4a34e39b66ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2269957651655226044, guid: 8ebafd25458e0ae4897e4a34e39b66ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1980,16 +1990,6 @@ PrefabInstance:
     - target: {fileID: 445265472, guid: 8ebafd25458e0ae4897e4a34e39b66ad, type: 3}
       propertyPath: m_Layer
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2269957652747618271, guid: 8ebafd25458e0ae4897e4a34e39b66ad,
-        type: 3}
-      propertyPath: m_Name
-      value: FP Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 2269957652747618271, guid: 8ebafd25458e0ae4897e4a34e39b66ad,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269957652747618275, guid: 8ebafd25458e0ae4897e4a34e39b66ad,
         type: 3}

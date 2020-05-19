@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        player = this.gameObject;
+        player = this.gameObject;        
     }
 
 
