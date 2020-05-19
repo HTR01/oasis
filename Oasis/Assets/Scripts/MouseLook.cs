@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using GameAnalyticsSDK.Setup;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,11 @@ public class MouseLook : MonoBehaviour
 
     public Vector3 Ahead, Side;
 
+    public float negative;
+    public float positive;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +23,7 @@ public class MouseLook : MonoBehaviour
         Cursor.visible = false;
      }
 
-    // Update is called once per frame
+    
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
@@ -28,7 +34,7 @@ public class MouseLook : MonoBehaviour
 
         xRotation -= mouseY;
         xRotation -= controllerY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, negative, positive);
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
