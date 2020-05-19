@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
 
     bool isGrounded;
-
+    public static bool isCrouched = false;
 
 
     bool water;
@@ -75,11 +75,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("SlowWalk"))
         {
             speed = speed / 2;
+            isCrouched = true;
         }
 
         if (Input.GetButtonUp("SlowWalk"))
         {
             speed = speed * 2;
+            isCrouched = false;
         }
     }
 
