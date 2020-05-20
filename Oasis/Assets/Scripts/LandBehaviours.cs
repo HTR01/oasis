@@ -7,45 +7,47 @@ public class LandBehaviours : MonoBehaviour
 {
     //basic requirements for movement
     float speed;
-    Transform target;
+    Vector3 target;
     bool fedBool, grazeBool, idleBool, fleeBool;
-    
+
     //location distanceChecks
     float PlayerDistance;
     public float DistToFlee;
     float targetDist;
-    public GameObject RayHit;
 
     //Objects
-    GameObject Player;
+    public GameObject Player;
     GameObject Creature;
     NavMeshAgent agent;
 
-    //Timers
-    public float grazeTimeStart, idleTimeStart, ReturnGrazeStart;
 
-    float returnGrazeTime, grazeTime, idleTime;
-    // Start is called before the first frame update
+    //graze Timer
+    float grazeTime, grazeTimeStart;
+    public float grazeMin, grazeMax;
 
-    
-        // Find randomPoint Grazing
+    //idle Timer
+    float idleExit, idleExitStart;
+    public float idleExitMin, idleExitMax;
+
+    float idleEnter, idleEnterStart;
+    public float idleEnterMin, idleEnterMax;
+
+    float enterGrazeTime;
+    public float enterGrazeTimeStart;
+
+    public float grazeRangeMin, grazeRangeMax;
+
+    public GameObject targetMark;
+
+    // Find randomPoint Grazing
     Vector3 RandomPoint(Vector3 center)
     {
         Vector3 result = center;
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 30;)
         {
-
             Vector2 TargetPoint = Random.insideUnitCircle * Random.Range(250, 500);
             Vector3 randomPoint = center + new Vector3(TargetPoint.x, 0, TargetPoint.y);
-            
-            Debug.Log(randomPoint + "SpotCoords");
 
-            RaycastHit hit;
-            if (Physics.Raycast(new Vector3(target.transform.position.x, target.transform.position.y + 1000, target.transform.position.z), Vector3.down, out hit, Mathf.Infinity, layerMask: 1<<11))
-            {
-                Debug.Log(hit.point + "hit coords");
-                Debug.Log(hit.collider.name);
-            }
             return randomPoint;
         }
 
@@ -57,7 +59,7 @@ public class LandBehaviours : MonoBehaviour
     Vector3 FleePoint(Vector3 center)
     {
         Vector3 result = center;
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 30;)
         {
             Vector2 TargetPoint = Random.insideUnitCircle * Random.Range(DistToFlee, 500);
             Vector3 randomPoint = center + new Vector3(TargetPoint.x, 0, TargetPoint.y);
@@ -68,133 +70,218 @@ public class LandBehaviours : MonoBehaviour
     }
 
 
-
-
     void Start()
     {
+        idleEnterStart = Random.Range(idleEnterMin, idleEnterMax);
+        idleExitStart = Random.Range(idleExitMin, idleExitMax);
+        grazeTimeStart = Random.Range(grazeMin, grazeMax);
+
+
+        idleEnter = idleEnterStart;
+        idleExit = idleExitStart;
+        grazeTime = grazeTimeStart;
+
         fedBool = false;
         grazeBool = true;
         idleBool = false;
+        fleeBool = false;
 
-        target = GameObject.Find("targetMarker").transform;
+        target = GameObject.Find("targetMarker").transform.position;
         Player = GameObject.Find("Player");
         Creature = this.gameObject;
         agent = Creature.GetComponent<NavMeshAgent>();
 
-        agent.SetDestination(target.position);
-        grazeTime = grazeTimeStart;
-        idleTime = idleTimeStart;
-        returnGrazeTime = ReturnGrazeStart;
+        agent.SetDestination(target);
     }
 
     // Update is called once per frame
     void Update()
     {
+        targetMark.transform.position = target;
 
         PlayerDistance = Vector3.Distance(Player.transform.position, Creature.transform.position);
-        targetDist = Vector3.Distance(target.transform.position, transform.position);
+        targetDist = Vector3.Distance(target, transform.position);
 
         if (fleeBool == true)
         {
-            if (targetDist < 0.5)
+            if (targetDist < 0.55)
             {
-                returnGrazeTime -= Time.deltaTime;
-                if (returnGrazeTime < 0)
+                enterGrazeTime -= Time.deltaTime;
+                if (enterGrazeTime < 0)
                 {
                     grazeBool = true;
-                    returnGrazeTime += ReturnGrazeStart;
+                    fleeBool = false;
+                    enterGrazeTime += enterGrazeTimeStart;
                 }
             }
         }
         //run method for different behaviour based on variable
         if (PlayerDistance < DistToFlee && fedBool == false)
         {
+            fleeBool = true;
             //if (PlayerMovement.moveTotal >= PlayerMovement.moveTotal / 2)
-            {
-                grazeBool = false;
-                idleBool = false;
-                Flee();
-            }
         }
-        
+
+
+
+        if (fleeBool == true)
+        {
+            grazeBool = false;
+            idleBool = false;
+            Flee();
+        }
         if (fedBool == true)
         {
             Follow();
         }
-        
         if (grazeBool == true)
         {
             Graze();
         }
-        
         if (idleBool == true)
-         {
+        {
             Idle();
-         }
-
-
-    }
-
-
-    void Flee()
-    {
-        if (target.position != FleePoint(transform.position))
-        {
-            target.position = FleePoint(transform.position);
-            print("check");
-        }
-        agent.SetDestination(target.position);
-        agent.isStopped = false;
-        fleeBool = true;
-    }
-
-    void Follow()
-    {
-        if (targetDist <= 1)
-        {
-            target = Creature.transform;
-        }
-        else
-        {
-            target = Player.transform;
         }
 
-        if(PlayerDistance >= 10)
-        {
-            grazeBool = true;
-            fedBool = false;
-        }
-    }
 
-    void Graze()
-    {
-        grazeTime -= Time.deltaTime;
-        if (grazeTime < 0)
+        //Fleeing Behaviour
+        void Flee()
         {
-            if(target.position != RandomPoint(transform.position))
+            if (target != FleePoint(transform.position))
             {
-                target.position = FleePoint(transform.position);
-                print(target.position + "actualCoords");
+                target = FleePoint(transform.position);
             }
-            agent.SetDestination(target.position);
+
+            agent.SetDestination(target);
             agent.isStopped = false;
-            grazeTime += grazeTimeStart;
+            fleeBool = true;
+            FleeRecast();
         }
-    }
 
-    void Idle()
-    {
-        target = Creature.transform;
-    }
+        //following player Behaviour
+        void Follow()
+        {
+            if (targetDist <= 1)
+            {
+                target = Creature.transform.position;
+            }
+            else
+            {
+                target = Player.transform.position;
+            }
+
+            if (PlayerDistance >= 10)
+            {
+                grazeBool = true;
+                fedBool = false;
+            }
+        }
+
+
+        //Roaming terrain behaviour
+        void Graze()
+        {
+            IdleEnterTimer();
+
+            if (targetDist < 0.55f)
+            {
+                grazeTime -= Time.deltaTime;
+                print(grazeTime);
+            }
+
+            if (grazeTime < 0)
+            {
+                if (target != RandomPoint(transform.position))
+                {
+                    target = RandomPoint(transform.position);
+                }
+
+                RandomRecast();
+
+
+                agent.SetDestination(target);
+                agent.isStopped = false;
+                grazeTime += grazeTimeStart;
+
+            }
+
+            if (idleEnter < 0)
+            {
+                grazeBool = false;
+                idleBool = true;
+                idleEnter += idleEnterStart;
+                grazeTime = grazeTimeStart;
+            }
+        }
+
+
+        //sitting on spot behaviour
+        void Idle()
+        {
+            agent.isStopped = true;
+            runIdleTimer();
+            if (idleExit < 0)
+            {
+                idleBool = false;
+                grazeBool = true;
+                agent.isStopped = false;
+                idleExit += idleExitStart;
+            }
+        }
 
 
 
-    void runGrazeTimer()
-    {
-        grazeTime -= Time.deltaTime;
-    }
-    void runIdleTimer()
-    {
-        idleTime -= Time.deltaTime;
+
+        //Run Timers
+        void runIdleTimer()
+        {
+            idleExit -= Time.deltaTime;
+        }
+        void IdleEnterTimer()
+        {
+            idleEnter -= Time.deltaTime;
+        }
+
+
+
+
+
+        //Cast to find current postion/new position if on correct layer
+        void RandomRecast()
+        {
+            Vector3 RayFrom = new Vector3(target.x, target.y + 1000, target.z);
+            RaycastHit hit;
+
+            if (Physics.Raycast(RayFrom, Vector3.down * 2000, out hit, Mathf.Infinity, layerMask: 1 << 8))
+            {
+                target = hit.point;
+
+            }
+            else
+            {
+                target = RandomPoint(transform.position);
+                RandomRecast();
+            }
+
+        }
+
+
+        void FleeRecast()
+        {
+            Vector3 RayFrom = new Vector3(target.x, target.y + 1000, target.z);
+            RaycastHit hit;
+
+            if (Physics.Raycast(RayFrom, Vector3.down * 2000, out hit, Mathf.Infinity, layerMask: 1 << 8))
+            {
+                target = hit.point;
+
+            }
+            else
+            {
+                target = FleePoint(transform.position);
+                FleeRecast();
+            }
+
+        }
     }
 }
