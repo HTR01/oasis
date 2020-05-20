@@ -83,6 +83,17 @@ public class PlayerMovement : MonoBehaviour
             speed = speed * 2;
             isCrouched = false;
         }
+
+        if (Input.GetButtonDown("Sprint"))
+        {
+            speed = speed * 2;
+        }
+
+        if (Input.GetButtonUp("Sprint"))
+        {
+            speed = speed / 2;
+        }
+
         waterTint.SetActive(false);
     }
 
