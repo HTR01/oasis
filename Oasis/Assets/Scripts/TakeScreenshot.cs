@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.Timers;
 using UnityEngine;
 using UnityEditor;
+using System.IO;
 
 public class TakeScreenshot : MonoBehaviour
 {
@@ -13,7 +14,13 @@ public class TakeScreenshot : MonoBehaviour
 
     private void Start()
     {
-        m_Path = Application.dataPath + "/Screenshots/";        
+        m_Path = Application.dataPath + "/Screenshots/";
+
+        if (!Directory.Exists(m_Path))
+        {
+            System.IO.Directory.CreateDirectory(m_Path);
+        }
+        
     }
 
     void Update()
