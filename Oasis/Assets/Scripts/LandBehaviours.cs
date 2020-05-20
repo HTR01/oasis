@@ -9,6 +9,7 @@ public class LandBehaviours : MonoBehaviour
     float speed;
     Vector3 target;
     bool fedBool, grazeBool, idleBool, fleeBool;
+    bool currentlyFleeing;
 
     //location distanceChecks
     float PlayerDistance;
@@ -25,6 +26,9 @@ public class LandBehaviours : MonoBehaviour
     float grazeTime, grazeTimeStart;
     public float grazeMin, grazeMax;
 
+    float enterGrazeTime;
+    public float enterGrazeTimeStart;
+
     //idle Timer
     float idleExit, idleExitStart;
     public float idleExitMin, idleExitMax;
@@ -32,9 +36,9 @@ public class LandBehaviours : MonoBehaviour
     float idleEnter, idleEnterStart;
     public float idleEnterMin, idleEnterMax;
 
-    float enterGrazeTime;
-    public float enterGrazeTimeStart;
-
+    //
+    float fleeTimer;
+    public float fleeTimerStart;
     public float grazeRangeMin, grazeRangeMax;
 
     public GameObject targetMark;
@@ -80,6 +84,7 @@ public class LandBehaviours : MonoBehaviour
         idleEnter = idleEnterStart;
         idleExit = idleExitStart;
         grazeTime = grazeTimeStart;
+        fleeTimer = fleeTimerStart;
 
         fedBool = false;
         grazeBool = true;
@@ -97,13 +102,28 @@ public class LandBehaviours : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        print(enterGrazeTime + "Graze Timer");
         targetMark.transform.position = target;
 
         PlayerDistance = Vector3.Distance(Player.transform.position, Creature.transform.position);
         targetDist = Vector3.Distance(target, transform.position);
 
+
+
+
+        //run method for different behaviour based on variable
+        if (PlayerDistance < DistToFlee && fedBool == false)
+        {
+            fleeBool = true;
+        }
+
+
         if (fleeBool == true)
         {
+            grazeBool = false;
+            idleBool = false;
+            Flee();
             if (targetDist < 0.55)
             {
                 enterGrazeTime -= Time.deltaTime;
@@ -114,21 +134,6 @@ public class LandBehaviours : MonoBehaviour
                     enterGrazeTime += enterGrazeTimeStart;
                 }
             }
-        }
-        //run method for different behaviour based on variable
-        if (PlayerDistance < DistToFlee && fedBool == false)
-        {
-            fleeBool = true;
-            //if (PlayerMovement.moveTotal >= PlayerMovement.moveTotal / 2)
-        }
-
-
-
-        if (fleeBool == true)
-        {
-            grazeBool = false;
-            idleBool = false;
-            Flee();
         }
         if (fedBool == true)
         {
@@ -147,14 +152,21 @@ public class LandBehaviours : MonoBehaviour
         //Fleeing Behaviour
         void Flee()
         {
-            if (target != FleePoint(transform.position))
+            if (currentlyFleeing == false)
             {
-                target = FleePoint(transform.position);
+                if (target != FleePoint(transform.position))
+                {
+                    target = FleePoint(transform.position);
+                    currentlyFleeing = true;
+                }
             }
-
+            if (currentlyFleeing == true && PlayerDistance > DistToFlee)
+            {
+                currentlyFleeing = false;
+                fleeBool = false;
+                grazeBool = true;
+            }
             agent.SetDestination(target);
-            agent.isStopped = false;
-            fleeBool = true;
             FleeRecast();
         }
 
@@ -163,11 +175,11 @@ public class LandBehaviours : MonoBehaviour
         {
             if (targetDist <= 1)
             {
-                target = Creature.transform.position;
+                agent.isStopped = true;
             }
             else
             {
-                target = Player.transform.position;
+                agent.isStopped = false;
             }
 
             if (PlayerDistance >= 10)
@@ -186,7 +198,6 @@ public class LandBehaviours : MonoBehaviour
             if (targetDist < 0.55f)
             {
                 grazeTime -= Time.deltaTime;
-                print(grazeTime);
             }
 
             if (grazeTime < 0)
