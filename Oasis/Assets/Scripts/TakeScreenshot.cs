@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Security.Cryptography;
-using System.Timers;
 using UnityEngine;
-using UnityEditor;
 using System.IO;
 
 public class TakeScreenshot : MonoBehaviour
@@ -25,14 +21,19 @@ public class TakeScreenshot : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetButtonDown("Screenshot"))
+        {
+            Screenshot();
+        }
+    }
+
+    void Screenshot()
+    {
         string date = System.DateTime.Now.ToString();
         date = date.Replace("/", "-");
         date = date.Replace(" ", "_");
         date = date.Replace(":", "-");
 
-        if (Input.GetButtonDown("Screenshot"))
-        {
-            ScreenCapture.CaptureScreenshot(m_Path + "Screenshot" + date + ".jpg");
-        }
+        ScreenCapture.CaptureScreenshot(m_Path + "Screenshot" + date + ".jpg");
     }
 }
