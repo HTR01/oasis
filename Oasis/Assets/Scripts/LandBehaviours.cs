@@ -42,8 +42,9 @@ public class LandBehaviours : MonoBehaviour
     public float grazeRangeMin, grazeRangeMax;
 
     public GameObject targetMark;
+    GameObject marker;
 
-    // Find randomPoint Grazing
+
     Vector3 RandomPoint(Vector3 center)
     {
         Vector3 result = center;
@@ -76,6 +77,8 @@ public class LandBehaviours : MonoBehaviour
 
     void Start()
     {
+        marker = GameObject.Find("Sphere");
+
         idleEnterStart = Random.Range(idleEnterMin, idleEnterMax);
         idleExitStart = Random.Range(idleExitMin, idleExitMax);
         grazeTimeStart = Random.Range(grazeMin, grazeMax);
@@ -91,8 +94,8 @@ public class LandBehaviours : MonoBehaviour
         idleBool = false;
         fleeBool = false;
 
-        target = GameObject.Find("targetMarker").transform.position;
-        Player = GameObject.Find("Player");
+        target = transform.position;
+        Player = GameObject.Find("PlayerMaster");
         Creature = this.gameObject;
         agent = Creature.GetComponent<NavMeshAgent>();
 
@@ -102,9 +105,6 @@ public class LandBehaviours : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        print(enterGrazeTime + "Graze Timer");
-        targetMark.transform.position = target;
 
         PlayerDistance = Vector3.Distance(Player.transform.position, Creature.transform.position);
         targetDist = Vector3.Distance(target, transform.position);
@@ -167,6 +167,10 @@ public class LandBehaviours : MonoBehaviour
                 grazeBool = true;
             }
             agent.SetDestination(target);
+            if(agent.velocity == Vector3.zero)
+            {
+                FleeRecast();
+            }
             FleeRecast();
         }
 
@@ -265,7 +269,7 @@ public class LandBehaviours : MonoBehaviour
 
             if (Physics.Raycast(RayFrom, Vector3.down * 2000, out hit, Mathf.Infinity, layerMask: 1 << 8))
             {
-                target = hit.point;
+                target = new Vector3(hit.point.x, hit.point.y + 1.5f, hit.point.z);
 
             }
             else
@@ -284,7 +288,8 @@ public class LandBehaviours : MonoBehaviour
 
             if (Physics.Raycast(RayFrom, Vector3.down * 2000, out hit, Mathf.Infinity, layerMask: 1 << 8))
             {
-                target = hit.point;
+                target = new Vector3(hit.point.x, hit.point.y + 1.5f, hit.point.z);
+                
 
             }
             else

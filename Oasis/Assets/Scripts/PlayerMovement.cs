@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         moveTotal = move.x + move.y + move.z;
-        print(moveTotal);
+
         if (water == false)
         {
             groundMove();

@@ -152,15 +152,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2ba565fa022114db2b9b074ad1be6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DistToFlee: 50
+  DistToFlee: 20
   Player: {fileID: 1122042101}
   grazeMin: 4
   grazeMax: 6
+  enterGrazeTimeStart: 10
   idleExitMin: 25
   idleExitMax: 30
   idleEnterMin: 25
-  idleEnterMax: 30
-  enterGrazeTimeStart: 10
+  idleEnterMax: 50
+  fleeTimerStart: 5
   grazeRangeMin: 0
   grazeRangeMax: 0
   targetMark: {fileID: 1727510631}
