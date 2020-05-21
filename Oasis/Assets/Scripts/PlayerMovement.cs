@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using GameAnalyticsSDK.Setup;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,8 +19,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
 
     bool isGrounded;
-
-
+    public static bool isCrouched = false;
+    public GameObject waterTint;
 
     bool water;
     GameObject player;
@@ -30,14 +31,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        player = this.gameObject;
+        player = this.gameObject;        
     }
 
 
     void Update()
     {
         moveTotal = move.x + move.y + move.z;
-        print(moveTotal);
+
         if (water == false)
         {
             groundMove();
@@ -74,6 +75,30 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        if (Input.GetButtonDown("SlowWalk"))
+        {
+            speed = speed / 2;
+            isCrouched = true;
+        }
+
+        if (Input.GetButtonUp("SlowWalk"))
+        {
+            speed = speed * 2;
+            isCrouched = false;
+        }
+
+        /*if (Input.GetButtonDown("Sprint"))
+        {
+            speed = speed * 2;
+        }
+
+        if (Input.GetButtonUp("Sprint"))
+        {
+            speed = speed / 2;
+        }*/
+
+        waterTint.SetActive(false);
     }
 
     void Swimming()
@@ -86,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         move = moveX + moveZ;
         controller.Move(move * speed * Time.deltaTime);
 
-
+        waterTint.SetActive(true);
     }
 
     private void OnTriggerStay(Collider other)
