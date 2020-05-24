@@ -9,13 +9,13 @@ public class WaterCheck : MonoBehaviour
 
     void Update()
     {
-        if(water == true)
-        {
-            waterTint.SetActive(true);
-        }
         if(water == false)
         {
             waterTint.SetActive(false);
+        }
+        else
+        {
+            waterTint.SetActive(true);
         }
     }
 

@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     bool isGrounded;
     public static bool isCrouched = false;
-    public GameObject waterTint;
+    //public GameObject waterTint;
 
     bool water;
     GameObject player;
@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
             speed = speed / 2;
         }*/
 
-        waterTint.SetActive(false);
+        //waterTint.SetActive(false);
     }
 
     void Swimming()
@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         move = moveX + moveZ;
         controller.Move(move * speed * Time.deltaTime);
 
-        waterTint.SetActive(true);
+        //waterTint.SetActive(true);
     }
 
     private void OnTriggerStay(Collider other)
