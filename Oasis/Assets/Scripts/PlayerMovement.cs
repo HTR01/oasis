@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 12f;
+    public float sprintSpeed = 24f;
+    public float baseSpeed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
 
@@ -88,15 +90,15 @@ public class PlayerMovement : MonoBehaviour
             isCrouched = false;
         }
 
-        /*if (Input.GetButtonDown("Sprint"))
+        if (Input.GetButtonDown("Sprint") && water == false)
         {
-            speed = speed * 2;
+            speed = sprintSpeed;
         }
 
-        if (Input.GetButtonUp("Sprint"))
+        if (Input.GetButtonUp("Sprint") && water == false)
         {
-            speed = speed / 2;
-        }*/
+            speed = baseSpeed;
+        }
 
         //waterTint.SetActive(false);
     }
@@ -127,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.layer == 4)
         {
             water = false;
+            speed = baseSpeed;
         }
     }
 }
