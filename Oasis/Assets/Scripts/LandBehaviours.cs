@@ -71,6 +71,7 @@ public class LandBehaviours : MonoBehaviour
             return randomPoint;
 
         }
+
         return result;
     }
 
@@ -109,8 +110,10 @@ public class LandBehaviours : MonoBehaviour
         PlayerDistance = Vector3.Distance(Player.transform.position, Creature.transform.position);
         targetDist = Vector3.Distance(target, transform.position);
 
+        //print(idleEnter + "Idle Timer");
+        //print(agent.velocity);
 
-
+        marker.transform.position = target;
 
         //run method for different behaviour based on variable
         if (PlayerDistance < DistToFlee && fedBool == false)
@@ -123,8 +126,7 @@ public class LandBehaviours : MonoBehaviour
         {
             grazeBool = false;
             idleBool = false;
-            Flee();
-            if (targetDist < 0.55)
+            if (targetDist < 0.55 && PlayerDistance > DistToFlee)
             {
                 enterGrazeTime -= Time.deltaTime;
                 if (enterGrazeTime < 0)
@@ -134,6 +136,7 @@ public class LandBehaviours : MonoBehaviour
                     enterGrazeTime += enterGrazeTimeStart;
                 }
             }
+            Flee();
         }
         if (fedBool == true)
         {
@@ -157,21 +160,24 @@ public class LandBehaviours : MonoBehaviour
                 if (target != FleePoint(transform.position))
                 {
                     target = FleePoint(transform.position);
+                    FleeRecast();
                     currentlyFleeing = true;
                 }
             }
+
             if (currentlyFleeing == true && PlayerDistance > DistToFlee)
             {
                 currentlyFleeing = false;
                 fleeBool = false;
                 grazeBool = true;
             }
-            agent.SetDestination(target);
-            if(agent.velocity == Vector3.zero)
+            else if(agent.velocity == Vector3.zero)
             {
+                target = FleePoint(transform.position);
                 FleeRecast();
             }
-            FleeRecast();
+
+            agent.SetDestination(target);
         }
 
         //following player Behaviour
@@ -270,7 +276,7 @@ public class LandBehaviours : MonoBehaviour
             if (Physics.Raycast(RayFrom, Vector3.down * 2000, out hit, Mathf.Infinity, layerMask: 1 << 8))
             {
                 target = new Vector3(hit.point.x, hit.point.y + 1.5f, hit.point.z);
-
+                print("RandomCast");
             }
             else
             {
@@ -289,8 +295,8 @@ public class LandBehaviours : MonoBehaviour
             if (Physics.Raycast(RayFrom, Vector3.down * 2000, out hit, Mathf.Infinity, layerMask: 1 << 8))
             {
                 target = new Vector3(hit.point.x, hit.point.y + 1.5f, hit.point.z);
-                
 
+                print("Fleecast");
             }
             else
             {
