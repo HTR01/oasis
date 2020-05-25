@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
             speed = baseSpeed;
         }
 
-        //waterTint.SetActive(false);
+        RenderSettings.fog = false;
     }
 
     void Swimming()
@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
         move = moveX + moveZ;
         controller.Move(move * speed * Time.deltaTime);
 
-        //waterTint.SetActive(true);
+        RenderSettings.fog = true;
     }
 
     private void OnTriggerStay(Collider other)
