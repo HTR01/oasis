@@ -12,10 +12,12 @@ public class WaterCheck : MonoBehaviour
         if(water == false)
         {
             waterTint.SetActive(false);
+            RenderSettings.fog = false;
         }
         else
         {
             waterTint.SetActive(true);
+            RenderSettings.fog = true;
         }
     }
 
