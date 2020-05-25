@@ -24,7 +24,6 @@ public class WaterCheck : MonoBehaviour
         if (other.gameObject.layer == 4)
         {
             water = true;
-            Debug.Log(water);
         }
     }
 
@@ -33,7 +32,6 @@ public class WaterCheck : MonoBehaviour
         if (other.gameObject.layer == 4)
         {
             water = false;
-            Debug.Log(water);
         }
     }
 }

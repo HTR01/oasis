@@ -23,7 +23,6 @@ public class DayNightController : MonoBehaviour
     void Update()
     {
         UpdateSun();
-
         currentTimeOfDay += (Time.deltaTime / secondsInFullDay) * timeMultiplier;
 
         if (currentTimeOfDay >= 1)
