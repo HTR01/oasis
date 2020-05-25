@@ -12,6 +12,7 @@ public class DayNightController : MonoBehaviour
     public float timeMultiplier = 1f;
 
     float sunInitialIntensity;
+    public static bool isDay = true;
 
     void Start()
     {
@@ -47,6 +48,15 @@ public class DayNightController : MonoBehaviour
         else if (currentTimeOfDay >= 0.73f)
         {
             intensityMultiplier = Mathf.Clamp01(1 - ((currentTimeOfDay - 0.73f) * (1 / 0.02f)));
+        }
+
+        if (currentTimeOfDay >= 0.25f && currentTimeOfDay <= 0.75f)
+        {
+            isDay = true;
+        }
+        if (currentTimeOfDay >= 0.75f || (currentTimeOfDay >= 0f && currentTimeOfDay <= 0.25))
+        {
+            isDay = false;
         }
 
         sun.intensity = sunInitialIntensity * intensityMultiplier;
