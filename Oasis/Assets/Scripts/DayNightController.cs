@@ -50,7 +50,7 @@ public class DayNightController : MonoBehaviour
             intensityMultiplier = Mathf.Clamp01(1 - ((currentTimeOfDay - 0.73f) * (1 / 0.02f)));
         }
 
-        if (currentTimeOfDay >= 0.25f && currentTimeOfDay <= 0.35f)
+        if (currentTimeOfDay >= 0.15f && currentTimeOfDay <= 0.35f)
         {
             dayNeutral = true;
         }
