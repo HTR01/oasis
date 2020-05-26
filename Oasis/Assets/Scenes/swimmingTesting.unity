@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 471754957}
   - component: {fileID: 471754956}
   m_Layer: 0
-  m_Name: Cube1
+  m_Name: Achievement1
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

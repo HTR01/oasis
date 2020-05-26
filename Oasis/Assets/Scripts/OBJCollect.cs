@@ -22,7 +22,7 @@ public class OBJCollect : MonoBehaviour
     {
         if (col.tag == "Collectable")
         {
-            if (col.name == "Cube1")
+            if (col.name == "Achievement1")
             {
                 GameAnalytics.NewDesignEvent("Achievement", 1);
                 GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Tutorial");
