@@ -16,7 +16,7 @@ public class MoonController : MonoBehaviour
     void Start()
     {
         sunInitialIntensity = sun.intensity;
-        currentTimeOfDay = 0.95f;
+        currentTimeOfDay = 0.98f;
     }
 
     void Update()

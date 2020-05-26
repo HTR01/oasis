@@ -2655,10 +2655,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 943077134939949670, guid: eccc94ea216469346ab5473926f1d78e,
+        type: 3}
+      propertyPath: currentTimeOfDay
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 943077134939949664, guid: eccc94ea216469346ab5473926f1d78e,
         type: 3}
       propertyPath: currentTimeOfDay
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 943077134823193766, guid: eccc94ea216469346ab5473926f1d78e,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 943077134823193766, guid: eccc94ea216469346ab5473926f1d78e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.90508515
+      objectReference: {fileID: 0}
+    - target: {fileID: 943077134823193766, guid: eccc94ea216469346ab5473926f1d78e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.6462264
       objectReference: {fileID: 0}
     - target: {fileID: 943077134790831610, guid: eccc94ea216469346ab5473926f1d78e,
         type: 3}
