@@ -19,5 +19,10 @@ public class DayNightSwitch : MonoBehaviour
             Sun.SetActive(false);
             Moon.SetActive(true);
         }
+        if (DayNightController.dayNeutral == true)
+        {
+            Sun.SetActive(true);
+            Moon.SetActive(true);
+        }
     }
 }
