@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using GameAnalyticsSDK;
 using System.IO;
+using UnityEngine.UI;
 
 public class OBJCollect : MonoBehaviour
 {
     string m_Path;
+    public GameObject achievement1;
 
     void Start()
     {
@@ -29,6 +31,7 @@ public class OBJCollect : MonoBehaviour
                 Destroy(col.gameObject);
                 Achievements.OBJCollected = true;
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement1" + ".jpg");
+                achievement1.SetActive(true);
             }
         }
     }

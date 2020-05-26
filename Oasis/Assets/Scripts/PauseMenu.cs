@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using GameAnalyticsSDK.Setup;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pause;
+    public GameObject achievements;
     bool isPaused = false;
 
     private void Update()
@@ -38,6 +40,18 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = false;
         isPaused = false;
         
+    }
+
+    public void Achivements()
+    {
+        achievements.SetActive(true);
+        pause.SetActive(false);
+    }
+
+    public void AchievementsBack()
+    {
+        achievements.SetActive(false);
+        pause.SetActive(true);
     }
 
     public void Pause()
