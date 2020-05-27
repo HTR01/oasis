@@ -742,6 +742,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3151dc31cb0dd6c4c899aef8da4b0847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achievement1: {fileID: 0}
+  achievement2: {fileID: 0}
+  ach: {fileID: 0}
 --- !u!108 &190052586
 Light:
   m_ObjectHideFlags: 0

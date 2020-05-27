@@ -10,6 +10,7 @@ public class OBJCollect : MonoBehaviour
     string m_Path;
     public GameObject achievement1;
     public GameObject achievement2;
+    public Achievements ach;
 
     void Start()
     {
@@ -30,7 +31,7 @@ public class OBJCollect : MonoBehaviour
                 GameAnalytics.NewDesignEvent("Achievement", 1);
                 GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Tutorial");
                 Destroy(col.gameObject);
-                Achievements.OBJCollected = true;
+                ach.Ach01();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement1" + ".jpg");
                 achievement1.SetActive(true);
             }
@@ -38,7 +39,7 @@ public class OBJCollect : MonoBehaviour
             {
                 GameAnalytics.NewDesignEvent("Achievement", 2);
                 Destroy(col.gameObject);
-                Achievements.OBJCollected = true;
+                ach.Ach02();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement2" + ".jpg");
                 achievement2.SetActive(true);
             }

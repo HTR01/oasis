@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Achievements : MonoBehaviour
 {
-
     //Universal Variables
     public GameObject achNote;
     //public AudioSource achSound;
@@ -13,38 +12,38 @@ public class Achievements : MonoBehaviour
     public GameObject achTitle, achDesc;
 
     //Achievement01
-    public GameObject ach01Img;
+    public GameObject ach01Img, ach02Img;
     public static bool OBJCollected;
-    public int ach01Code, ach02Code;
+    //public int ach01Code, ach02Code;
 
     float timer = 5;
     float timerStart = 5;
 
     private void Start()
     {
-        PlayerPrefs.SetInt("Ach01", 0);
-        OBJCollected = false;
+        //PlayerPrefs.SetInt("Ach01", 111);
+        //PlayerPrefs.SetInt("Ach02", 112);
+        //OBJCollected = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        ach01Code = PlayerPrefs.GetInt("Ach01");
-        ach02Code = PlayerPrefs.GetInt("Ach02");
+        //ach01Code = PlayerPrefs.GetInt("Ach01");
+        //ach02Code = PlayerPrefs.GetInt("Ach02");
 
-        if (OBJCollected == true && ach01Code != 111)
+        /*if (OBJCollected == true && ach01Code == 111)
         {
             Ach01();
         }
-        if (OBJCollected == true && ach01Code != 112)
+        if (OBJCollected == true && ach02Code == 112)
         {
             Ach02();
-        }
+        }*/
         if (timer <= 0)
         {
             ResetUI();
         }
-
     }
 
     private void FixedUpdate()
@@ -57,38 +56,38 @@ public class Achievements : MonoBehaviour
 
     //copy paste and edit me for additional achievements
     
-    void Ach01()
+    public void Ach01()
     {
         achActive = true;
-        ach01Code = 111;
-        PlayerPrefs.SetInt("Ach01", ach01Code);
+        //ach01Code = 0;
+        //PlayerPrefs.SetInt("Ach01", ach01Code);
         //achSound.Play();
         ach01Img.SetActive(true);
         achTitle.GetComponent<Text>().text = "Achievement 1";
         achDesc.GetComponent<Text>().text = "Woah";
         achNote.SetActive(true);
-        OBJCollected = false;
+        //OBJCollected = false;
         //ResetUI();
     }
 
-    void Ach02()
+    public void Ach02()
     {
         achActive = true;
-        ach02Code = 112;
-        PlayerPrefs.SetInt("Ach02", ach01Code);
+        //ach02Code = 0;
+        //PlayerPrefs.SetInt("Ach02", ach02Code);
         //achSound.Play();
-        ach01Img.SetActive(true);
+        ach02Img.SetActive(true);
         achTitle.GetComponent<Text>().text = "Achievement 2";
         achDesc.GetComponent<Text>().text = "yess";
         achNote.SetActive(true);
-        OBJCollected = false;
+        //OBJCollected = false;
         //ResetUI();
     }
 
     void ResetUI()
     {
         achActive = false;
-        ach01Img.SetActive(false);
+        ach01Img.SetActive(false); ach02Img.SetActive(false);
         achNote.SetActive(false);
         achTitle.GetComponent<Text>().text = null;
         achDesc.GetComponent<Text>().text = null;
