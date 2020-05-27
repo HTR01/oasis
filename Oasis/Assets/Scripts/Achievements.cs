@@ -16,6 +16,7 @@ public class Achievements : MonoBehaviour
     public GameObject ach01Img;
     public static bool OBJCollected;
     public int ach01Code;
+    public int ach02Code;
 
     float timer = 5;
     float timerStart = 5;
@@ -31,10 +32,15 @@ public class Achievements : MonoBehaviour
     void Update()
     {
         ach01Code = PlayerPrefs.GetInt("Ach01");
+        ach02Code = PlayerPrefs.GetInt("Ach02");
 
         if (OBJCollected == true && ach01Code != 111)
         {
             Ach01();
+        }
+        if (OBJCollected == true && ach01Code != 112)
+        {
+            Ach02();
         }
         if (timer <= 0)
         {
@@ -63,10 +69,25 @@ public class Achievements : MonoBehaviour
         PlayerPrefs.SetInt("Ach01", ach01Code);
         //achSound.Play();
         ach01Img.SetActive(true);
-        achTitle.GetComponent<Text>().text = "Achievement Name";
-        achDesc.GetComponent<Text>().text = "Achievement Description";
+        achTitle.GetComponent<Text>().text = "Achievement 1";
+        achDesc.GetComponent<Text>().text = "Woah";
         achNote.SetActive(true);
-        //resetUI
+        OBJCollected = false;
+        //ResetUI();
+    }
+
+    void Ach02()
+    {
+        achActive = true;
+        ach02Code = 112;
+        PlayerPrefs.SetInt("Ach02", ach01Code);
+        //achSound.Play();
+        ach01Img.SetActive(true);
+        achTitle.GetComponent<Text>().text = "Achievement 2";
+        achDesc.GetComponent<Text>().text = "yess";
+        achNote.SetActive(true);
+        OBJCollected = false;
+        //ResetUI();
     }
 
     void ResetUI()
@@ -77,6 +98,5 @@ public class Achievements : MonoBehaviour
         achTitle.GetComponent<Text>().text = null;
         achDesc.GetComponent<Text>().text = null;
         timer = timerStart;
-        print("hit");
     }
 }
