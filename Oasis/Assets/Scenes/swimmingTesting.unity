@@ -775,6 +775,7 @@ MonoBehaviour:
   achDesc: {fileID: 1115344531}
   ach01Img: {fileID: 1079869184}
   ach01Code: 0
+  ach02Code: 0
 --- !u!4 &608990509
 Transform:
   m_ObjectHideFlags: 0
@@ -1129,7 +1130,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6f64604a8eca10648b5e5018c67edebd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -58.814358
+      value: -62
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6f64604a8eca10648b5e5018c67edebd,
         type: 3}

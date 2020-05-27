@@ -15,12 +15,10 @@ public class Achievements : MonoBehaviour
     //Achievement01
     public GameObject ach01Img;
     public static bool OBJCollected;
-    public int ach01Code;
-    public int ach02Code;
+    public int ach01Code, ach02Code;
 
     float timer = 5;
     float timerStart = 5;
-
 
     private void Start()
     {
@@ -59,9 +57,6 @@ public class Achievements : MonoBehaviour
 
     //copy paste and edit me for additional achievements
     
-
-
-
     void Ach01()
     {
         achActive = true;
