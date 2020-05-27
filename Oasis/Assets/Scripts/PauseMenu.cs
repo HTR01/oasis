@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pause;
-    public GameObject achievements;
+    public GameObject achievements, settings;
     bool isPaused = false;
 
     private void Update()
@@ -40,6 +40,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = false;
         isPaused = false;
         achievements.SetActive(false);
+        settings.SetActive(false);
         
     }
 
@@ -48,7 +49,18 @@ public class PauseMenu : MonoBehaviour
         achievements.SetActive(true);
         pause.SetActive(false);
     }
+    
+    public void Settings()
+    {
+        settings.SetActive(true);
+        pause.SetActive(false);
+    }
 
+    public void SettingsBack()
+    {
+        settings.SetActive(false);
+        pause.SetActive(true);
+    }
     public void AchievementsBack()
     {
         achievements.SetActive(false);

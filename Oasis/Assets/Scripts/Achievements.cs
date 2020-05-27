@@ -12,7 +12,7 @@ public class Achievements : MonoBehaviour
     public GameObject achTitle, achDesc;
 
     //Achievement01
-    public GameObject ach01Img, ach02Img;
+    public GameObject ach01Img, ach02Img, ach03Img, ach04Img, ach05Img, ach06Img, ach07Img, ach08Img, ach09Img;
     public static bool OBJCollected;
     //public int ach01Code, ach02Code;
 
@@ -82,6 +82,63 @@ public class Achievements : MonoBehaviour
         achNote.SetActive(true);
         //OBJCollected = false;
         //ResetUI();
+    }
+
+    public void Ach03()
+    {
+        achActive = true;
+        ach03Img.SetActive(true);
+        achTitle.GetComponent<Text>().text = "Achievement 3";
+        achDesc.GetComponent<Text>().text = "yess";
+        achNote.SetActive(true);
+    }
+    public void Ach04()
+    {
+        achActive = true;
+        ach04Img.SetActive(true);
+        achTitle.GetComponent<Text>().text = "Achievement 4";
+        achDesc.GetComponent<Text>().text = "yess";
+        achNote.SetActive(true);
+    }
+    public void Ach05()
+    {
+        achActive = true;
+        ach05Img.SetActive(true);
+        achTitle.GetComponent<Text>().text = "Achievement 5";
+        achDesc.GetComponent<Text>().text = "yess";
+        achNote.SetActive(true);
+    }
+    public void Ach06()
+    {
+        achActive = true;
+        ach06Img.SetActive(true);
+        achTitle.GetComponent<Text>().text = "Achievement 6";
+        achDesc.GetComponent<Text>().text = "yess";
+        achNote.SetActive(true);
+    }
+    public void Ach07()
+    {
+        achActive = true;
+        ach07Img.SetActive(true);
+        achTitle.GetComponent<Text>().text = "Achievement 7";
+        achDesc.GetComponent<Text>().text = "yess";
+        achNote.SetActive(true);
+    }
+    public void Ach08()
+    {
+        achActive = true;
+        ach08Img.SetActive(true);
+        achTitle.GetComponent<Text>().text = "Achievement 8";
+        achDesc.GetComponent<Text>().text = "yess";
+        achNote.SetActive(true);
+    }
+    public void Ach09()
+    {
+        achActive = true;
+        ach09Img.SetActive(true);
+        achTitle.GetComponent<Text>().text = "Achievement 9";
+        achDesc.GetComponent<Text>().text = "yess";
+        achNote.SetActive(true);
     }
 
     void ResetUI()
