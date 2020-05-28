@@ -12,7 +12,7 @@ public class NavmeshPoint : MonoBehaviour
     Vector3 RandomPoint(Vector3 center, float range)
     {
         Vector3 result = center;
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 30;)
         {
             Vector2 TargetPoint = Random.insideUnitCircle* Random.Range(38, 800);
             Vector3 randomPoint = center + new Vector3 (TargetPoint.x, 0, TargetPoint.y);
