@@ -113,7 +113,7 @@ public class LandBehaviours : MonoBehaviour
         //print(idleEnter + "Idle Timer");
         //print(agent.velocity);
 
-        marker.transform.position = target;
+        //marker.transform.position = target;
 
         //run method for different behaviour based on variable
         if (PlayerDistance < DistToFlee && fedBool == false)
@@ -276,7 +276,6 @@ public class LandBehaviours : MonoBehaviour
             if (Physics.Raycast(RayFrom, Vector3.down * 2000, out hit, Mathf.Infinity, layerMask: 1 << 8))
             {
                 target = new Vector3(hit.point.x, hit.point.y + 1.5f, hit.point.z);
-                print("RandomCast");
             }
             else
             {
@@ -296,7 +295,6 @@ public class LandBehaviours : MonoBehaviour
             {
                 target = new Vector3(hit.point.x, hit.point.y + 1.5f, hit.point.z);
 
-                print("Fleecast");
             }
             else
             {
