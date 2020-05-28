@@ -43,6 +43,62 @@ public class OBJCollect : MonoBehaviour
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement2" + ".jpg");
                 achievement2.SetActive(true);
             }
+            if (col.name == "Achievement3")
+            {
+                GameAnalytics.NewDesignEvent("Achievement", 3);
+                Destroy(col.gameObject);
+                ach.Ach03();
+                ScreenCapture.CaptureScreenshot(m_Path + "Achievement3" + ".jpg");
+                achievement2.SetActive(true);
+            }
+            if (col.name == "Achievement4")
+            {
+                GameAnalytics.NewDesignEvent("Achievement", 4);
+                Destroy(col.gameObject);
+                ach.Ach04();
+                ScreenCapture.CaptureScreenshot(m_Path + "Achievement4" + ".jpg");
+                achievement2.SetActive(true);
+            }
+            if (col.name == "Achievement5")
+            {
+                GameAnalytics.NewDesignEvent("Achievement", 5);
+                Destroy(col.gameObject);
+                ach.Ach05();
+                ScreenCapture.CaptureScreenshot(m_Path + "Achievement5" + ".jpg");
+                achievement2.SetActive(true);
+            }
+            if (col.name == "Achievement6")
+            {
+                GameAnalytics.NewDesignEvent("Achievement", 6);
+                Destroy(col.gameObject);
+                ach.Ach06();
+                ScreenCapture.CaptureScreenshot(m_Path + "Achievement6" + ".jpg");
+                achievement2.SetActive(true);
+            }
+            if (col.name == "Achievement7")
+            {
+                GameAnalytics.NewDesignEvent("Achievement", 7);
+                Destroy(col.gameObject);
+                ach.Ach07();
+                ScreenCapture.CaptureScreenshot(m_Path + "Achievement7" + ".jpg");
+                achievement2.SetActive(true);
+            }
+            if (col.name == "Achievement8")
+            {
+                GameAnalytics.NewDesignEvent("Achievement", 8);
+                Destroy(col.gameObject);
+                ach.Ach08();
+                ScreenCapture.CaptureScreenshot(m_Path + "Achievement8" + ".jpg");
+                achievement2.SetActive(true);
+            }
+            if (col.name == "Achievement9")
+            {
+                GameAnalytics.NewDesignEvent("Achievement", 9);
+                Destroy(col.gameObject);
+                ach.Ach09();
+                ScreenCapture.CaptureScreenshot(m_Path + "Achievement9" + ".jpg");
+                achievement2.SetActive(true);
+            }
         }
     }
 }

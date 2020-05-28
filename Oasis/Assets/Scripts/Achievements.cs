@@ -78,7 +78,7 @@ public class Achievements : MonoBehaviour
         //achSound.Play();
         ach02Img.SetActive(true);
         achTitle.GetComponent<Text>().text = "Achievement 2";
-        achDesc.GetComponent<Text>().text = "yess";
+        achDesc.GetComponent<Text>().text = "Yay Achievements";
         achNote.SetActive(true);
         //OBJCollected = false;
         //ResetUI();
@@ -89,7 +89,7 @@ public class Achievements : MonoBehaviour
         achActive = true;
         ach03Img.SetActive(true);
         achTitle.GetComponent<Text>().text = "Achievement 3";
-        achDesc.GetComponent<Text>().text = "yess";
+        achDesc.GetComponent<Text>().text = "Third one down";
         achNote.SetActive(true);
     }
     public void Ach04()
@@ -97,7 +97,7 @@ public class Achievements : MonoBehaviour
         achActive = true;
         ach04Img.SetActive(true);
         achTitle.GetComponent<Text>().text = "Achievement 4";
-        achDesc.GetComponent<Text>().text = "yess";
+        achDesc.GetComponent<Text>().text = "FORE!";
         achNote.SetActive(true);
     }
     public void Ach05()
@@ -105,7 +105,7 @@ public class Achievements : MonoBehaviour
         achActive = true;
         ach05Img.SetActive(true);
         achTitle.GetComponent<Text>().text = "Achievement 5";
-        achDesc.GetComponent<Text>().text = "yess";
+        achDesc.GetComponent<Text>().text = "This still works?";
         achNote.SetActive(true);
     }
     public void Ach06()
@@ -113,7 +113,7 @@ public class Achievements : MonoBehaviour
         achActive = true;
         ach06Img.SetActive(true);
         achTitle.GetComponent<Text>().text = "Achievement 6";
-        achDesc.GetComponent<Text>().text = "yess";
+        achDesc.GetComponent<Text>().text = "I'm down for six";
         achNote.SetActive(true);
     }
     public void Ach07()
@@ -121,7 +121,7 @@ public class Achievements : MonoBehaviour
         achActive = true;
         ach07Img.SetActive(true);
         achTitle.GetComponent<Text>().text = "Achievement 7";
-        achDesc.GetComponent<Text>().text = "yess";
+        achDesc.GetComponent<Text>().text = "Lucky!";
         achNote.SetActive(true);
     }
     public void Ach08()
@@ -129,7 +129,7 @@ public class Achievements : MonoBehaviour
         achActive = true;
         ach08Img.SetActive(true);
         achTitle.GetComponent<Text>().text = "Achievement 8";
-        achDesc.GetComponent<Text>().text = "yess";
+        achDesc.GetComponent<Text>().text = "8888888888888888888888888888888888";
         achNote.SetActive(true);
     }
     public void Ach09()
@@ -137,14 +137,15 @@ public class Achievements : MonoBehaviour
         achActive = true;
         ach09Img.SetActive(true);
         achTitle.GetComponent<Text>().text = "Achievement 9";
-        achDesc.GetComponent<Text>().text = "yess";
+        achDesc.GetComponent<Text>().text = "Hi Woody";
         achNote.SetActive(true);
     }
 
     void ResetUI()
     {
         achActive = false;
-        ach01Img.SetActive(false); ach02Img.SetActive(false);
+        ach01Img.SetActive(false); ach02Img.SetActive(false); ach03Img.SetActive(false); ach04Img.SetActive(false); ach05Img.SetActive(false);
+        ach06Img.SetActive(false); ach07Img.SetActive(false); ach08Img.SetActive(false); ach09Img.SetActive(false);
         achNote.SetActive(false);
         achTitle.GetComponent<Text>().text = null;
         achDesc.GetComponent<Text>().text = null;
