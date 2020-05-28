@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pause;
-    public GameObject achievements, settings;
+    public GameObject achievements, settings, audioMenu, videoMenu;
     bool isPaused = false;
 
     private void Update()
@@ -60,6 +60,26 @@ public class PauseMenu : MonoBehaviour
     {
         settings.SetActive(false);
         pause.SetActive(true);
+    }
+    public void Audio()
+    {
+        audioMenu.SetActive(true);
+        settings.SetActive(false);
+    }
+    public void AudioBack()
+    {
+        settings.SetActive(true);
+        audioMenu.SetActive(false);
+    }
+    public void Video()
+    {
+        videoMenu.SetActive(true);
+        settings.SetActive(false);
+    }
+    public void videoBack()
+    {
+        settings.SetActive(true);
+        videoMenu.SetActive(false);
     }
     public void AchievementsBack()
     {
