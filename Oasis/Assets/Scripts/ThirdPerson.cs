@@ -12,7 +12,7 @@ public class ThirdPerson : MonoBehaviour
     float distance = 10.0f;
     float currentX = 0.0f;
     float currentY = 0.0f;
-    public float mouseSensitivity = 50f;
+    public float mouseSensitivity = 5f;
     //float controllerX = 0.0f;
     //float controllerY = 0.0f;
 
@@ -24,8 +24,8 @@ public class ThirdPerson : MonoBehaviour
 
     private void Update()
     {
-        currentX += Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        currentY += Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        currentX += Input.GetAxis("Mouse X");
+        currentY += Input.GetAxis("Mouse Y");
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         //controllerX += Input.GetAxis("Controller X");
         //controllerY += Input.GetAxis("Controller Y");

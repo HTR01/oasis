@@ -5,8 +5,10 @@ using UnityEngine;
 public class CameraChange : MonoBehaviour
 {
     bool cameraFP = true;
-    public Camera FPCamera;
-    public Camera TPCamera;
+    //public Camera FPCamera;
+    //public Camera TPCamera;
+    public GameObject FPCamera;
+    public GameObject TPCamera;
 
     // Update is called once per frame
     void Update()
@@ -16,18 +18,18 @@ public class CameraChange : MonoBehaviour
             if (cameraFP == true)
             {
                 cameraFP = false;
-                //FPCamera.SetActive(false);
-                //TPCamera.SetActive(true);
-                FPCamera.enabled = false;
-                TPCamera.enabled = true;
+                FPCamera.SetActive(false);
+                TPCamera.SetActive(true);
+                //FPCamera.enabled = false;
+                //TPCamera.enabled = true;
             }
             else
             {
                 cameraFP = true;
-                //FPCamera.SetActive(true);
-                //TPCamera.SetActive(false);
-                FPCamera.enabled = true;
-                TPCamera.enabled = false;
+                FPCamera.SetActive(true);
+                TPCamera.SetActive(false);
+                //FPCamera.enabled = true;
+                //TPCamera.enabled = false;
             }
         }
     }
