@@ -8,6 +8,11 @@ public class FullscreenToggle : MonoBehaviour
     public bool fullscreen = true;
     public Toggle fullscreenCheck;
 
+
+    private void Start()
+    {
+        Screen.fullScreen = true;
+    }
     void Update()
     {
         if (fullscreenCheck.isOn == true)
