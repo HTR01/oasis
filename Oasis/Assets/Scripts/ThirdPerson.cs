@@ -9,10 +9,10 @@ public class ThirdPerson : MonoBehaviour
 
     Camera cam;
 
-    float distance = 10.0f;
+    float distance = 20.0f;
     float currentX = 0.0f;
     float currentY = 0.0f;
-    public float mouseSensitivity = 5f;
+    public float mouseSensitivity = 3f;
     //float controllerX = 0.0f;
     //float controllerY = 0.0f;
 

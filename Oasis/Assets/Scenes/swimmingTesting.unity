@@ -5451,6 +5451,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 766063031, guid: 8ebafd25458e0ae4897e4a34e39b66ad, type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 971859887, guid: 8ebafd25458e0ae4897e4a34e39b66ad, type: 3}
+      propertyPath: mouseSensitivity
+      value: 68
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ebafd25458e0ae4897e4a34e39b66ad, type: 3}
 --- !u!1 &6439485130628919415
