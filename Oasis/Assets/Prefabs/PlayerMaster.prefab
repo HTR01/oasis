@@ -275,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &766063028
 Transform:
   m_ObjectHideFlags: 0
@@ -297,7 +297,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766063027}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -315,7 +315,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 90
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -365,7 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookAt: {fileID: 2269957651655226044}
   camTransform: {fileID: 0}
-  mouseSensitivity: 100
+  mouseSensitivity: 68
 --- !u!1 &1517544925
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,8 +840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53370998b8ad9cc4391775b05307c34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FPCamera: {fileID: 2269957652747618269}
-  TPCamera: {fileID: 766063031}
+  FPCamera: {fileID: 2269957652747618271}
+  TPCamera: {fileID: 766063027}
 --- !u!1 &2269957651712186103
 GameObject:
   m_ObjectHideFlags: 0
