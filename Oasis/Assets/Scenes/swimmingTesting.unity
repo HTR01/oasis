@@ -1315,6 +1315,12 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!20 &557793269 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2269957652747618269, guid: 8ebafd25458e0ae4897e4a34e39b66ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 2269957652450984643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &560408912 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4940383501057648384, guid: d27ba35ac02ff07498f13149baf3019c,
@@ -1993,6 +1999,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920100493}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &971859885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 766063027, guid: 8ebafd25458e0ae4897e4a34e39b66ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 2269957652450984643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &971859886 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 766063031, guid: 8ebafd25458e0ae4897e4a34e39b66ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 2269957652450984643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &971859887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971859885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a44545725efd948a312c39bf789be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookAt: {fileID: 1129654099}
+  camTransform: {fileID: 0}
+  mouseSensitivity: 100
 --- !u!1 &993336175 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8965161496777136631, guid: d27ba35ac02ff07498f13149baf3019c,
@@ -5475,6 +5508,31 @@ PrefabInstance:
     - target: {fileID: 766063029, guid: 8ebafd25458e0ae4897e4a34e39b66ad, type: 3}
       propertyPath: negative
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 766063029, guid: 8ebafd25458e0ae4897e4a34e39b66ad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 766063027, guid: 8ebafd25458e0ae4897e4a34e39b66ad, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 190052582, guid: 8ebafd25458e0ae4897e4a34e39b66ad, type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 557793269}
+    - target: {fileID: 190052582, guid: 8ebafd25458e0ae4897e4a34e39b66ad, type: 3}
+      propertyPath: TPCamera
+      value: 
+      objectReference: {fileID: 971859886}
+    - target: {fileID: 2269957652747618271, guid: 8ebafd25458e0ae4897e4a34e39b66ad,
+        type: 3}
+      propertyPath: m_TagString
+      value: FirstPersonCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 766063031, guid: 8ebafd25458e0ae4897e4a34e39b66ad, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ebafd25458e0ae4897e4a34e39b66ad, type: 3}

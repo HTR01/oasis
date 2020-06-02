@@ -16,12 +16,16 @@ public class CameraChange : MonoBehaviour
             if (cameraFP == true)
             {
                 cameraFP = false;
+                //FPCamera.SetActive(false);
+                //TPCamera.SetActive(true);
                 FPCamera.enabled = false;
                 TPCamera.enabled = true;
             }
             else
             {
                 cameraFP = true;
+                //FPCamera.SetActive(true);
+                //TPCamera.SetActive(false);
                 FPCamera.enabled = true;
                 TPCamera.enabled = false;
             }
