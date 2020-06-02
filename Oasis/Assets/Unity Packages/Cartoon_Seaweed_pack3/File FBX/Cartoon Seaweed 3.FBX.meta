@@ -1,0 +1,255 @@
+fileFormatVersion: 2
+guid: 418e09d3dcc22844195b6110a7079010
+timeCreated: 1557763158
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cartoon Seaweed 3.0
+    100004: Cartoon Seaweed 3.0_MeshPart0
+    100006: Cartoon Seaweed 3.0_MeshPart1
+    100008: Cartoon Seaweed 3.1
+    100010: Cartoon Seaweed 3.10
+    100012: Cartoon Seaweed 3.11
+    100014: Cartoon Seaweed 3.12
+    100016: Cartoon Seaweed 3.13
+    100018: Cartoon Seaweed 3.14
+    100020: Cartoon Seaweed 3.15
+    100022: Cartoon Seaweed 3.16
+    100024: Cartoon Seaweed 3.17
+    100026: Cartoon Seaweed 3.18
+    100028: Cartoon Seaweed 3.19
+    100030: Cartoon Seaweed 3.2
+    100032: Cartoon Seaweed 3.20
+    100034: Cartoon Seaweed 3.21
+    100036: Cartoon Seaweed 3.22
+    100038: Cartoon Seaweed 3.23
+    100040: Cartoon Seaweed 3.24
+    100042: Cartoon Seaweed 3.25
+    100044: Cartoon Seaweed 3.26
+    100046: Cartoon Seaweed 3.26 1
+    100048: Cartoon Seaweed 3.27
+    100050: Cartoon Seaweed 3.28
+    100052: Cartoon Seaweed 3.29
+    100054: Cartoon Seaweed 3.3
+    100056: Cartoon Seaweed 3.30
+    100058: Cartoon Seaweed 3.31
+    100060: Cartoon Seaweed 3.32
+    100062: Cartoon Seaweed 3.33
+    100064: Cartoon Seaweed 3.4
+    100066: Cartoon Seaweed 3.5
+    100068: Cartoon Seaweed 3.6
+    100070: Cartoon Seaweed 3.7
+    100072: Cartoon Seaweed 3.8
+    100074: Cartoon Seaweed 3.9
+    400000: //RootNode
+    400002: Cartoon Seaweed 3.0
+    400004: Cartoon Seaweed 3.0_MeshPart0
+    400006: Cartoon Seaweed 3.0_MeshPart1
+    400008: Cartoon Seaweed 3.1
+    400010: Cartoon Seaweed 3.10
+    400012: Cartoon Seaweed 3.11
+    400014: Cartoon Seaweed 3.12
+    400016: Cartoon Seaweed 3.13
+    400018: Cartoon Seaweed 3.14
+    400020: Cartoon Seaweed 3.15
+    400022: Cartoon Seaweed 3.16
+    400024: Cartoon Seaweed 3.17
+    400026: Cartoon Seaweed 3.18
+    400028: Cartoon Seaweed 3.19
+    400030: Cartoon Seaweed 3.2
+    400032: Cartoon Seaweed 3.20
+    400034: Cartoon Seaweed 3.21
+    400036: Cartoon Seaweed 3.22
+    400038: Cartoon Seaweed 3.23
+    400040: Cartoon Seaweed 3.24
+    400042: Cartoon Seaweed 3.25
+    400044: Cartoon Seaweed 3.26
+    400046: Cartoon Seaweed 3.26 1
+    400048: Cartoon Seaweed 3.27
+    400050: Cartoon Seaweed 3.28
+    400052: Cartoon Seaweed 3.29
+    400054: Cartoon Seaweed 3.3
+    400056: Cartoon Seaweed 3.30
+    400058: Cartoon Seaweed 3.31
+    400060: Cartoon Seaweed 3.32
+    400062: Cartoon Seaweed 3.33
+    400064: Cartoon Seaweed 3.4
+    400066: Cartoon Seaweed 3.5
+    400068: Cartoon Seaweed 3.6
+    400070: Cartoon Seaweed 3.7
+    400072: Cartoon Seaweed 3.8
+    400074: Cartoon Seaweed 3.9
+    2300000: Cartoon Seaweed 3.0_MeshPart0
+    2300002: Cartoon Seaweed 3.0_MeshPart1
+    2300004: Cartoon Seaweed 3.1
+    2300006: Cartoon Seaweed 3.10
+    2300008: Cartoon Seaweed 3.11
+    2300010: Cartoon Seaweed 3.12
+    2300012: Cartoon Seaweed 3.13
+    2300014: Cartoon Seaweed 3.14
+    2300016: Cartoon Seaweed 3.15
+    2300018: Cartoon Seaweed 3.16
+    2300020: Cartoon Seaweed 3.17
+    2300022: Cartoon Seaweed 3.18
+    2300024: Cartoon Seaweed 3.19
+    2300026: Cartoon Seaweed 3.2
+    2300028: Cartoon Seaweed 3.20
+    2300030: Cartoon Seaweed 3.21
+    2300032: Cartoon Seaweed 3.22
+    2300034: Cartoon Seaweed 3.23
+    2300036: Cartoon Seaweed 3.24
+    2300038: Cartoon Seaweed 3.25
+    2300040: Cartoon Seaweed 3.26
+    2300042: Cartoon Seaweed 3.26 1
+    2300044: Cartoon Seaweed 3.27
+    2300046: Cartoon Seaweed 3.28
+    2300048: Cartoon Seaweed 3.29
+    2300050: Cartoon Seaweed 3.3
+    2300052: Cartoon Seaweed 3.30
+    2300054: Cartoon Seaweed 3.31
+    2300056: Cartoon Seaweed 3.32
+    2300058: Cartoon Seaweed 3.33
+    2300060: Cartoon Seaweed 3.4
+    2300062: Cartoon Seaweed 3.5
+    2300064: Cartoon Seaweed 3.6
+    2300066: Cartoon Seaweed 3.7
+    2300068: Cartoon Seaweed 3.8
+    2300070: Cartoon Seaweed 3.9
+    3300000: Cartoon Seaweed 3.0_MeshPart0
+    3300002: Cartoon Seaweed 3.0_MeshPart1
+    3300004: Cartoon Seaweed 3.1
+    3300006: Cartoon Seaweed 3.10
+    3300008: Cartoon Seaweed 3.11
+    3300010: Cartoon Seaweed 3.12
+    3300012: Cartoon Seaweed 3.13
+    3300014: Cartoon Seaweed 3.14
+    3300016: Cartoon Seaweed 3.15
+    3300018: Cartoon Seaweed 3.16
+    3300020: Cartoon Seaweed 3.17
+    3300022: Cartoon Seaweed 3.18
+    3300024: Cartoon Seaweed 3.19
+    3300026: Cartoon Seaweed 3.2
+    3300028: Cartoon Seaweed 3.20
+    3300030: Cartoon Seaweed 3.21
+    3300032: Cartoon Seaweed 3.22
+    3300034: Cartoon Seaweed 3.23
+    3300036: Cartoon Seaweed 3.24
+    3300038: Cartoon Seaweed 3.25
+    3300040: Cartoon Seaweed 3.26
+    3300042: Cartoon Seaweed 3.26 1
+    3300044: Cartoon Seaweed 3.27
+    3300046: Cartoon Seaweed 3.28
+    3300048: Cartoon Seaweed 3.29
+    3300050: Cartoon Seaweed 3.3
+    3300052: Cartoon Seaweed 3.30
+    3300054: Cartoon Seaweed 3.31
+    3300056: Cartoon Seaweed 3.32
+    3300058: Cartoon Seaweed 3.33
+    3300060: Cartoon Seaweed 3.4
+    3300062: Cartoon Seaweed 3.5
+    3300064: Cartoon Seaweed 3.6
+    3300066: Cartoon Seaweed 3.7
+    3300068: Cartoon Seaweed 3.8
+    3300070: Cartoon Seaweed 3.9
+    4300000: Cartoon Seaweed 3.0_MeshPart0
+    4300002: Cartoon Seaweed 3.0_MeshPart1
+    4300004: Cartoon Seaweed 3.1
+    4300006: Cartoon Seaweed 3.2
+    4300008: Cartoon Seaweed 3.3
+    4300010: Cartoon Seaweed 3.4
+    4300012: Cartoon Seaweed 3.5
+    4300014: Cartoon Seaweed 3.6
+    4300016: Cartoon Seaweed 3.7
+    4300018: Cartoon Seaweed 3.8
+    4300020: Cartoon Seaweed 3.9
+    4300022: Cartoon Seaweed 3.10
+    4300024: Cartoon Seaweed 3.11
+    4300026: Cartoon Seaweed 3.12
+    4300028: Cartoon Seaweed 3.13
+    4300030: Cartoon Seaweed 3.14
+    4300032: Cartoon Seaweed 3.15
+    4300034: Cartoon Seaweed 3.16
+    4300036: Cartoon Seaweed 3.17
+    4300038: Cartoon Seaweed 3.18
+    4300040: Cartoon Seaweed 3.19
+    4300042: Cartoon Seaweed 3.20
+    4300044: Cartoon Seaweed 3.21
+    4300046: Cartoon Seaweed 3.22
+    4300048: Cartoon Seaweed 3.23
+    4300050: Cartoon Seaweed 3.24
+    4300052: Cartoon Seaweed 3.25
+    4300054: Cartoon Seaweed 3.26
+    4300056: Cartoon Seaweed 3.26
+    4300058: Cartoon Seaweed 3.27
+    4300060: Cartoon Seaweed 3.28
+    4300062: Cartoon Seaweed 3.29
+    4300064: Cartoon Seaweed 3.30
+    4300066: Cartoon Seaweed 3.31
+    4300068: Cartoon Seaweed 3.32
+    4300070: Cartoon Seaweed 3.33
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
