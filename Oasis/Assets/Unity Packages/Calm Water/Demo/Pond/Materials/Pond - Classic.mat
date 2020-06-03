@@ -120,16 +120,16 @@ Material:
     - _DetailNormalMapScale: 1
     - _Displacement: 0.06
     - _DisplacementMode: 0
-    - _Distortion: 32
+    - _Distortion: 63.3
     - _DistortionQuality: 0
     - _DstBlend: 0
-    - _EdgeFade: 4.26
+    - _EdgeFade: 5.07
     - _EnableFog: 0
     - _EnableLargeBump: 0
     - _FOAM: 0
     - _FlowIntensity: 1
     - _FlowSpeed: 1
-    - _FoamSize: 3.08
+    - _FoamSize: 0.6
     - _Frequency: 2
     - _GSteepness: 2
     - _Glossiness: 0.5
