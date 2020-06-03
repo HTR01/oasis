@@ -7,6 +7,7 @@ public class FoWHeightManager : MonoBehaviour
 
     GameObject Player;
     GameObject canvas;
+    public int y;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,6 @@ public class FoWHeightManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        canvas.transform.position = new Vector3(80.4f, Player.transform.position.y + 60, -57.2f);
+        canvas.transform.position = new Vector3(80.4f, Player.transform.position.y + y, -57.2f);
     }
 }
