@@ -48,10 +48,15 @@
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv) + tex2D(_SecondaryTex, i.uv);
-				col.a = 2.0f - col.r * 2.0f - col.b * 0.0f;
-
-
-                return fixed4(0,0,0,col.a);
+				if ((col.g == 1 && col.r == 0 && col.b == 0) || (col.r == 1 && col.b == 0 && col.g == 0) || (col.r == 1 && col.b == 1 && col.g == 0))
+				{
+					col.a = 0.0f;
+				}
+				else {
+					col.a = 1;
+				}
+                //return fixed4(0,0,0,col.a);
+				return col;
             }
             ENDCG
         }
