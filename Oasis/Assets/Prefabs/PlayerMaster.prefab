@@ -493,7 +493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5423445687936507054}
   - component: {fileID: 3599398509130817061}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: circle 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -982,7 +982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2847881106215249700}
   - component: {fileID: 956221299556039550}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: circle 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1042,7 +1042,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0d803eca4a620e345abd99c5f2b2ad01, type: 3}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

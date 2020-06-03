@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public static bool isCrouched = false;
     //public GameObject waterTint;
 
-    bool water;
+    public static bool water;
     GameObject player;
     public GameObject cam;
     float sprint;

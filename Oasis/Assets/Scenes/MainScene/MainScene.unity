@@ -207,6 +207,11 @@ PrefabInstance:
       propertyPath: y
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 979779516397634041, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: FoW
+      value: 
+      objectReference: {fileID: 1413709400}
     - target: {fileID: 6108365284476869879, guid: ed562d366b770e14ca374b1c5c31eb78,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -322,6 +327,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea089647b44bddd49abde88ee34242cf, type: 3}
+--- !u!224 &1413709400 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6108365283310813038, guid: ed562d366b770e14ca374b1c5c31eb78,
+    type: 3}
+  m_PrefabInstance: {fileID: 445510352}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1432752189 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: ea089647b44bddd49abde88ee34242cf,
