@@ -152,6 +152,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SwimmingTestingPreservedScene
       objectReference: {fileID: 0}
+    - target: {fileID: 5922844082463477772, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6108365283156694798, guid: ed562d366b770e14ca374b1c5c31eb78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -222,11 +227,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5922844082463477772, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 5498139189628518502, guid: ed562d366b770e14ca374b1c5c31eb78,
         type: 3}
       propertyPath: m_Layer
@@ -247,6 +247,11 @@ PrefabInstance:
       propertyPath: TPCamera
       value: 
       objectReference: {fileID: 1350826222}
+    - target: {fileID: 5423960858932317094, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: playMove
+      value: 
+      objectReference: {fileID: 1794187035}
     - target: {fileID: 979779516397634042, guid: ed562d366b770e14ca374b1c5c31eb78,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -346,3 +351,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 445510352}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1794187035 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6108365284568826114, guid: ed562d366b770e14ca374b1c5c31eb78,
+    type: 3}
+  m_PrefabInstance: {fileID: 445510352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2666e2fc35720394b9b4eeec68c2d74c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
