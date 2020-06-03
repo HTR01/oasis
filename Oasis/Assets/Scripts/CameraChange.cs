@@ -9,8 +9,7 @@ public class CameraChange : MonoBehaviour
     //public Camera TPCamera;
     public GameObject FPCamera;
     public GameObject TPCamera;
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetButtonDown("Camera"))

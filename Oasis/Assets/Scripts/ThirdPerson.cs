@@ -26,12 +26,14 @@ public class ThirdPerson : MonoBehaviour
     {
         currentX += Input.GetAxis("Mouse X");
         currentY += Input.GetAxis("Mouse Y");
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        //float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         //controllerX += Input.GetAxis("Controller X");
         //controllerY += Input.GetAxis("Controller Y");
 
+        Debug.Log(camTransform.rotation.y);
+        float yRotation = camTransform.eulerAngles.y;
 
-        lookAt.Rotate(Vector3.up * mouseX);
+        lookAt.eulerAngles = new Vector3(lookAt.eulerAngles.x, yRotation, lookAt.eulerAngles.z);
         currentY = Mathf.Clamp(currentY, 0f, 50f);
     }
 
