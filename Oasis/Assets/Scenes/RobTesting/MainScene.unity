@@ -317,6 +317,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 979779516397634041, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: FoW
+      value: 
+      objectReference: {fileID: 1552429577}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed562d366b770e14ca374b1c5c31eb78, type: 3}
 --- !u!1 &687362972 stripped
@@ -348,6 +353,12 @@ MeshCollider:
 --- !u!1 &1350826222 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5423960858503037683, guid: ed562d366b770e14ca374b1c5c31eb78,
+    type: 3}
+  m_PrefabInstance: {fileID: 445510352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1552429577 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6108365283310813038, guid: ed562d366b770e14ca374b1c5c31eb78,
     type: 3}
   m_PrefabInstance: {fileID: 445510352}
   m_PrefabAsset: {fileID: 0}

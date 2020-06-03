@@ -10,6 +10,7 @@ public class CameraChange : MonoBehaviour
     public GameObject FPCamera;
     public GameObject TPCamera;
 
+
     void Update()
     {
         if (Input.GetButtonDown("Camera"))
