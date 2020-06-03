@@ -106,7 +106,8 @@ public class LandBehaviours : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        print(grazeTime + "time");
+        print(targetDist + "dist");
         PlayerDistance = Vector3.Distance(Player.transform.position, Creature.transform.position);
         targetDist = Vector3.Distance(target, transform.position);
 
@@ -204,8 +205,8 @@ public class LandBehaviours : MonoBehaviour
         void Graze()
         {
             IdleEnterTimer();
-
-            if (targetDist < 0.55f)
+            
+            if (targetDist < 0.9f)
             {
                 grazeTime -= Time.deltaTime;
             }
@@ -293,7 +294,7 @@ public class LandBehaviours : MonoBehaviour
 
             if (Physics.Raycast(RayFrom, Vector3.down * 2000, out hit, Mathf.Infinity, layerMask: 1 << 8))
             {
-                target = new Vector3(hit.point.x, hit.point.y + 1.5f, hit.point.z);
+                target = new Vector3(hit.point.x, hit.point.y + 2f, hit.point.z);
 
             }
             else
