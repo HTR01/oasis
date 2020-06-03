@@ -9,7 +9,9 @@ public class CameraChange : MonoBehaviour
     //public Camera TPCamera;
     public GameObject FPCamera;
     public GameObject TPCamera;
-    
+
+
+    public PlayerMovement playMove;
     void Update()
     {
         if (Input.GetButtonDown("Camera"))
@@ -30,6 +32,13 @@ public class CameraChange : MonoBehaviour
                 //FPCamera.enabled = true;
                 //TPCamera.enabled = false;
             }
+        }
+
+        if(playMove.water == true)
+        {
+            cameraFP = true;
+            FPCamera.SetActive(true);
+            TPCamera.SetActive(false);
         }
     }
 }
