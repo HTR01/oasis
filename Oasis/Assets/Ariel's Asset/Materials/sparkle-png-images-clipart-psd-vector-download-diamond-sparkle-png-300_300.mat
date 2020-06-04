@@ -7,10 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: soap_bubbles_PNG15
+  m_Name: sparkle-png-images-clipart-psd-vector-download-diamond-sparkle-png-300_300
   m_Shader: {fileID: 10800, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 0
+  m_ShaderKeywords: _BUMPMODE_SINGLE _DISPLACEMENTMODE_OFF _DISTORTIONQUALITY_HIGH
+    _REFLECTIONTYPE_NONE
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -27,15 +28,23 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
+    - _BumpMapLarge:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DetailMask:
+    - _CapsMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
+    - _CausticsTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cube:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DisplacementTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -43,62 +52,102 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _FlowMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bd0ae003ad2ea1c4b951935a9af88d8e, type: 3}
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
+    - _ReflectionTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - PixelSnap: 0
+    - _Amplitude: 0.05
     - _BlendOp: 0
+    - _BumpLargeStrength: 1
+    - _BumpMode: 0
     - _BumpScale: 1
+    - _BumpStrength: 1
     - _CameraFadingEnabled: 0
     - _CameraFarFadeDistance: 2
     - _CameraNearFadeDistance: 1
+    - _CapsIntensity: 1
+    - _CapsSize: 1
+    - _CapsSpeed: 1
+    - _Caustics: 0
+    - _CausticsEnd: 10
+    - _CausticsIntensity: 4
+    - _CausticsSpeed: 1
+    - _CausticsStart: 0
     - _ColorMode: 0
+    - _CubeDist: 0.05
     - _Cull: 2
     - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
+    - _DepthEnd: 10
+    - _DepthStart: 0
+    - _DisplacementMode: 0
+    - _Distortion: 50
     - _DistortionBlend: 0.5
     - _DistortionEnabled: 0
+    - _DistortionQuality: 0
     - _DistortionStrength: 1
     - _DistortionStrengthScaled: 0
     - _DstBlend: 0
+    - _EdgeFade: 1
     - _EmissionEnabled: 0
     - _EnableExternalAlpha: 0
+    - _EnableFog: 0
+    - _FOAM: 0
     - _FlipbookMode: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
+    - _FlowIntensity: 1
+    - _FlowSpeed: 1
+    - _FoamSize: 0.5
+    - _Frequency: 1
     - _LightingEnabled: 0
-    - _Metallic: 0
     - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
+    - _Reflection: 1
+    - _ReflectionType: 0
+    - _RimPower: 0.5
+    - _Scatter: 0
+    - _Smoothing: 1
+    - _Smoothness: 1
     - _SoftParticlesEnabled: 0
     - _SoftParticlesFarFadeDistance: 1
     - _SoftParticlesNearFadeDistance: 0
-    - _SpecularHighlights: 1
+    - _Speed: 1
     - _SrcBlend: 1
-    - _UVSec: 0
+    - _Steepness: 1
+    - _Tess: 4
+    - _WhiteCaps: 0
+    - _WorldSpace: 0
     - _ZWrite: 1
+    - _specFresnel: 2
+    - _specIntensity: 1
     m_Colors:
-    - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
+    - _CameraFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
+    - _CubeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DepthColor: {r: 0, g: 0.5, b: 0.5, a: 1}
+    - _DisplacementSpeed: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ScatterColor: {r: 0, g: 1, b: 1, a: 1}
+    - _ScatterParams: {r: 1, g: 1, b: 1, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Speeds: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+    - _SpeedsLarge: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _WDirectionAB: {r: 0.3, g: 0.85, b: 0.85, a: 0.25}
+    - _WDirectionCD: {r: 0.1, g: 0.9, b: 0.5, a: 0.5}
+    - _WSpeed: {r: 1.2, g: 1.375, b: 1.1, a: 1.5}
