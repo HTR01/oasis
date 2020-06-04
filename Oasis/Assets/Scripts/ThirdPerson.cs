@@ -27,8 +27,8 @@ public class ThirdPerson : MonoBehaviour
         currentX += Input.GetAxis("Mouse X");
         currentY += Input.GetAxis("Mouse Y");
         //float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        controllerX += Input.GetAxis("Controller X");
-        controllerY += Input.GetAxis("Controller Y");
+        //controllerX += Input.GetAxis("Controller X");
+        //controllerY += Input.GetAxis("Controller Y");
 
 
         Debug.Log(camTransform.rotation.y);
@@ -36,16 +36,16 @@ public class ThirdPerson : MonoBehaviour
 
         lookAt.eulerAngles = new Vector3(lookAt.eulerAngles.x, yRotation, lookAt.eulerAngles.z);
         currentY = Mathf.Clamp(currentY, 0f, 50f);
-        controllerY = Mathf.Clamp(controllerY, 0f, 50f);
+        //controllerY = Mathf.Clamp(controllerY, 0f, 50f);
     }
 
     private void LateUpdate()
     {
         Vector3 dir = new Vector3(0, 0, -distance);
         Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
-        Quaternion rotationCon = Quaternion.Euler(controllerY, controllerX, 0);
+        //Quaternion rotationCon = Quaternion.Euler(controllerY, controllerX, 0);
         camTransform.position = lookAt.position + rotation * dir;
-        camTransform.position = lookAt.position + rotationCon * dir;
+        //camTransform.position = lookAt.position + rotationCon * dir;
         camTransform.LookAt(lookAt.position);
     }
 }
