@@ -9,6 +9,10 @@ public class PauseMenu : MonoBehaviour
     public GameObject pause;
     public GameObject achievements, settings, audioMenu, videoMenu;
     bool isPaused = false;
+    bool audioOn = false;
+    bool videoOn = false;
+    bool settingsOn = false;
+    bool achOn = false;
 
     private void Update()
     {
@@ -23,13 +27,25 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
-        if (Input.GetButtonDown("Cancel"))
+        /*if (Input.GetButtonDown("Cancel"))
         {
-            if (isPaused == true)
+            if (settingsOn == true)
             {
-                Resume();
+                SettingsBack();
             }
-        }
+            if (audioOn == true)
+            {
+                AudioBack();
+            }
+            if (videoOn == true)
+            {
+                videoBack();
+            }
+            if (achOn == true)
+            {
+                AchievementsBack();
+            }
+        }*/
     }
 
     public void Resume()
@@ -48,43 +64,55 @@ public class PauseMenu : MonoBehaviour
     {
         achievements.SetActive(true);
         pause.SetActive(false);
+        achOn = true;
     }
     
     public void Settings()
     {
         settings.SetActive(true);
         pause.SetActive(false);
+        settingsOn = true;
     }
 
     public void SettingsBack()
     {
         settings.SetActive(false);
         pause.SetActive(true);
+        settingsOn = false;
     }
     public void Audio()
     {
         audioMenu.SetActive(true);
         settings.SetActive(false);
+        audioOn = true;
+        settingsOn = false;
     }
     public void AudioBack()
     {
         settings.SetActive(true);
         audioMenu.SetActive(false);
+        audioOn = false;
+        settingsOn = true;
     }
     public void Video()
     {
         videoMenu.SetActive(true);
         settings.SetActive(false);
+        videoOn = true;
+        settingsOn = false;
     }
     public void videoBack()
     {
         settings.SetActive(true);
         videoMenu.SetActive(false);
+        videoOn = false;
+        settingsOn = true;
     }
     public void AchievementsBack()
     {
         achievements.SetActive(false);
         pause.SetActive(true);
+        achOn = false;
     }
 
     public void Pause()
