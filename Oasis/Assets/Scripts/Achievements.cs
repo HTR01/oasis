@@ -77,8 +77,8 @@ public class Achievements : MonoBehaviour
         //PlayerPrefs.SetInt("Ach02", ach02Code);
         //achSound.Play();
         ach02Img.SetActive(true);
-        achTitle.GetComponent<Text>().text = "Achievement 2";
-        achDesc.GetComponent<Text>().text = "Yay Achievements";
+        achTitle.GetComponent<Text>().text = "Bison";
+        achDesc.GetComponent<Text>().text = "You found a bison!";
         achNote.SetActive(true);
         //OBJCollected = false;
         //ResetUI();
