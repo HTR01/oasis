@@ -835,6 +835,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6108365284349818416, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: secondsInFullDay
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108365284349818422, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: secondsInFullDay
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 6108365284398937712, guid: ed562d366b770e14ca374b1c5c31eb78,
         type: 3}
       propertyPath: m_IsActive
