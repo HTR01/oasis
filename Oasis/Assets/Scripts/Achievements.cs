@@ -63,8 +63,8 @@ public class Achievements : MonoBehaviour
         //PlayerPrefs.SetInt("Ach01", ach01Code);
         //achSound.Play();
         ach01Img.SetActive(true);
-        achTitle.GetComponent<Text>().text = "Achievement 1";
-        achDesc.GetComponent<Text>().text = "Woah";
+        achTitle.GetComponent<Text>().text = "Boot";
+        achDesc.GetComponent<Text>().text = "Why a boot...";
         achNote.SetActive(true);
         //OBJCollected = false;
         //ResetUI();
@@ -88,56 +88,56 @@ public class Achievements : MonoBehaviour
     {
         achActive = true;
         ach03Img.SetActive(true);
-        achTitle.GetComponent<Text>().text = "Achievement 3";
-        achDesc.GetComponent<Text>().text = "Third one down";
+        achTitle.GetComponent<Text>().text = "Butterfly";
+        achDesc.GetComponent<Text>().text = "Wait no, don't fly away! ...Come back.";
         achNote.SetActive(true);
     }
     public void Ach04()
     {
         achActive = true;
         ach04Img.SetActive(true);
-        achTitle.GetComponent<Text>().text = "Achievement 4";
-        achDesc.GetComponent<Text>().text = "FORE!";
+        achTitle.GetComponent<Text>().text = "Chalice";
+        achDesc.GetComponent<Text>().text = "It's a golden cup.";
         achNote.SetActive(true);
     }
     public void Ach05()
     {
         achActive = true;
         ach05Img.SetActive(true);
-        achTitle.GetComponent<Text>().text = "Achievement 5";
-        achDesc.GetComponent<Text>().text = "This still works?";
+        achTitle.GetComponent<Text>().text = "Crane";
+        achDesc.GetComponent<Text>().text = "I hope I don't have to find 999 more...";
         achNote.SetActive(true);
     }
     public void Ach06()
     {
         achActive = true;
         ach06Img.SetActive(true);
-        achTitle.GetComponent<Text>().text = "Achievement 6";
-        achDesc.GetComponent<Text>().text = "I'm down for six";
+        achTitle.GetComponent<Text>().text = "Crown";
+        achDesc.GetComponent<Text>().text = "You're the Ruler of the World!";
         achNote.SetActive(true);
     }
     public void Ach07()
     {
         achActive = true;
         ach07Img.SetActive(true);
-        achTitle.GetComponent<Text>().text = "Achievement 7";
-        achDesc.GetComponent<Text>().text = "Lucky!";
+        achTitle.GetComponent<Text>().text = "Fish";
+        achDesc.GetComponent<Text>().text = "No you can't eat it. Stop pressing E.";
         achNote.SetActive(true);
     }
     public void Ach08()
     {
         achActive = true;
         ach08Img.SetActive(true);
-        achTitle.GetComponent<Text>().text = "Achievement 8";
-        achDesc.GetComponent<Text>().text = "8888888888888888888888888888888888";
+        achTitle.GetComponent<Text>().text = "Broken Spear";
+        achDesc.GetComponent<Text>().text = "Ok... But why was it there?";
         achNote.SetActive(true);
     }
     public void Ach09()
     {
         achActive = true;
         ach09Img.SetActive(true);
-        achTitle.GetComponent<Text>().text = "Achievement 9";
-        achDesc.GetComponent<Text>().text = "Hi Woody";
+        achTitle.GetComponent<Text>().text = "Turtle";
+        achDesc.GetComponent<Text>().text = "Turtle!";
         achNote.SetActive(true);
     }
 
