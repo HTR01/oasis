@@ -11,6 +11,8 @@ public class LandBehaviours : MonoBehaviour
     bool fedBool, grazeBool, idleBool, fleeBool;
     bool currentlyFleeing;
 
+    Animator Anim;
+    
     //location distanceChecks
     float PlayerDistance;
     public float DistToFlee;
@@ -78,6 +80,8 @@ public class LandBehaviours : MonoBehaviour
 
     void Start()
     {
+        Anim = GetComponent<Animator>();
+        
         marker = GameObject.Find("Sphere");
 
         idleEnterStart = Random.Range(idleEnterMin, idleEnterMax);
@@ -106,15 +110,17 @@ public class LandBehaviours : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(grazeTime + "time");
-        print(targetDist + "dist");
         PlayerDistance = Vector3.Distance(Player.transform.position, Creature.transform.position);
         targetDist = Vector3.Distance(target, transform.position);
 
-        //print(idleEnter + "Idle Timer");
-        //print(agent.velocity);
-
-        //marker.transform.position = target;
+        if(agent.velocity == Vector3.zero)
+        {
+            Anim.Play("BisonIdle");
+        }
+        else
+        {
+            Anim.Play("BisonWalk");
+        }
 
         //run method for different behaviour based on variable
         if (PlayerDistance < DistToFlee && fedBool == false)
