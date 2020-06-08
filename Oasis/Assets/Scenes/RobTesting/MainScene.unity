@@ -587,6 +587,96 @@ PrefabInstance:
       propertyPath: m_Name
       value: TakeScreenShot
       objectReference: {fileID: 0}
+    - target: {fileID: 8296172667976430847, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_Name
+      value: Achievement8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172667976430847, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172668713750230, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172668713750230, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_Name
+      value: Achievement5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172669343886028, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_Name
+      value: Achievement1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172669343886028, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172668442792179, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172668442792179, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_Name
+      value: Achievement6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172667722513279, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172667722513279, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_Name
+      value: Achievement2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172668941099265, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172668941099265, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_Name
+      value: Achievement7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172667533485913, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172667533485913, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_Name
+      value: Achievement3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172667415942681, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172667415942681, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_Name
+      value: Achievement9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172668609150096, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296172668609150096, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_Name
+      value: Achievement4
+      objectReference: {fileID: 0}
     - target: {fileID: 5479710615464495391, guid: 7275c7f19b5bde4499738da0cdebe4ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1165,96 +1255,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 174a39d4af1534e46bef95b52fa1b6de, type: 2}
-    - target: {fileID: 8296172669343886028, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_Name
-      value: Achievement1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172669343886028, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_TagString
-      value: Collectable
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172668609150096, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_TagString
-      value: Collectable
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172668609150096, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_Name
-      value: Achievement4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172668442792179, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_TagString
-      value: Collectable
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172668442792179, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_Name
-      value: Achievement6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172668941099265, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_TagString
-      value: Collectable
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172668941099265, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_Name
-      value: Achievement7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172668713750230, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_TagString
-      value: Collectable
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172668713750230, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_Name
-      value: Achievement5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172667976430847, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_Name
-      value: Achievement8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172667976430847, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_TagString
-      value: Collectable
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172667533485913, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_TagString
-      value: Collectable
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172667533485913, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_Name
-      value: Achievement3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172667415942681, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_TagString
-      value: Collectable
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172667415942681, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_Name
-      value: Achievement9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172667722513279, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_TagString
-      value: Collectable
-      objectReference: {fileID: 0}
-    - target: {fileID: 8296172667722513279, guid: ed562d366b770e14ca374b1c5c31eb78,
-        type: 3}
-      propertyPath: m_Name
-      value: Achievement2
-      objectReference: {fileID: 0}
     - target: {fileID: 6108365283514027919, guid: ed562d366b770e14ca374b1c5c31eb78,
         type: 3}
       propertyPath: m_FontData.m_Font
@@ -1301,6 +1301,71 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 212.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357464171003164977, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357464171003164978, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357464170968879531, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -22.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108365283418746358, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108365283418746358, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108365283418746358, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108365283799571834, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108365283799571834, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108365283935281311, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108365283935281311, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108365283935281311, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108365283987289126, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108365283987289126, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1924971874907713847, guid: ed562d366b770e14ca374b1c5c31eb78, type: 3}
