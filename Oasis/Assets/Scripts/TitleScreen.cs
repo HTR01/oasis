@@ -9,6 +9,7 @@ public class TitleScreen : MonoBehaviour
     public GameObject settings;
     public GameObject audioMenu;
     public GameObject videoMenu;
+    public GameObject controlsMenu;
 
     private void Start()
     {
@@ -40,6 +41,16 @@ public class TitleScreen : MonoBehaviour
     {
         settings.SetActive(true);
         audioMenu.SetActive(false);
+    }
+    public void Controls()
+    {
+        controlsMenu.SetActive(true);
+        settings.SetActive(false);
+    }
+    public void ControlsBack()
+    {
+        settings.SetActive(true);
+        controlsMenu.SetActive(false);
     }
     public void Video()
     {
