@@ -362,6 +362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DistToFlee: 20
   Player: {fileID: 0}
+  runSpeed: 5
   grazeMin: 5
   grazeMax: 10
   enterGrazeTimeStart: 30
@@ -6236,6 +6237,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108365283251052897, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_AllowMSAA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108365284629043987, guid: ed562d366b770e14ca374b1c5c31eb78,
+        type: 3}
+      propertyPath: m_AllowMSAA
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1924971874907713847, guid: ed562d366b770e14ca374b1c5c31eb78, type: 3}

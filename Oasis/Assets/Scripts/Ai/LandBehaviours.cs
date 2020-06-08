@@ -8,11 +8,17 @@ public class LandBehaviours : MonoBehaviour
     //basic requirements for movement
     float speed;
     Vector3 target;
-    bool fedBool, grazeBool, idleBool, fleeBool;
+    bool grazeBool, idleBool, fleeBool;
     bool currentlyFleeing;
 
+    //animator parameters
     Animator Anim;
-    
+    float lerpStart;
+    float lerpEnd;
+    float currentLerp;
+    float lerpTime, lerpTimeStart;
+
+
     //location distanceChecks
     float PlayerDistance;
     public float DistToFlee;
@@ -22,6 +28,8 @@ public class LandBehaviours : MonoBehaviour
     public GameObject Player;
     GameObject Creature;
     NavMeshAgent agent;
+    public float runSpeed;
+    float walkSpeed = 1.25f;
 
 
     //graze Timer
@@ -94,7 +102,6 @@ public class LandBehaviours : MonoBehaviour
         grazeTime = grazeTimeStart;
         fleeTimer = fleeTimerStart;
 
-        fedBool = false;
         grazeBool = true;
         idleBool = false;
         fleeBool = false;
@@ -103,6 +110,8 @@ public class LandBehaviours : MonoBehaviour
         Player = GameObject.Find("PlayerMaster");
         Creature = this.gameObject;
         agent = Creature.GetComponent<NavMeshAgent>();
+
+        lerpTimeStart = 0;
 
         agent.SetDestination(target);
     }
@@ -113,17 +122,58 @@ public class LandBehaviours : MonoBehaviour
         PlayerDistance = Vector3.Distance(Player.transform.position, Creature.transform.position);
         targetDist = Vector3.Distance(target, transform.position);
 
-        if(agent.velocity == Vector3.zero)
+
+
+        //Check what animation should be playing and lerp to
+        Anim.SetFloat("Blend", currentLerp);
+
+        if (agent.velocity == Vector3.zero && currentLerp != 0)
         {
-            Anim.Play("BisonIdle");
+            lerpStart = currentLerp;
+            lerpEnd = 0;
+            currentLerp = Mathf.Lerp(lerpStart, lerpEnd, lerpTime);
+            
+            lerpTimer();
+
         }
-        else
+        else if(agent.velocity == Vector3.zero && currentLerp == 0)
         {
-            Anim.Play("BisonWalk");
+            lerpTime = lerpTimeStart;
+        }
+        else if (fleeBool == true && currentLerp != 1)
+        {
+            lerpStart = currentLerp;
+            lerpEnd = 1;
+            currentLerp = Mathf.Lerp(lerpStart, lerpEnd, lerpTime);
+
+            lerpTimer();
+
+            agent.speed = runSpeed;
+        }
+        else if(fleeBool == true && currentLerp == 1)
+        {
+            lerpTime = lerpTimeStart;
+        }
+        else if(currentLerp != 0.5f)
+        {
+            lerpStart = currentLerp;
+            lerpEnd = 0.5f;
+            currentLerp = Mathf.Lerp(lerpStart, lerpEnd, lerpTime);
+
+            lerpTimer();
+
+            agent.speed = walkSpeed;
+        }
+        else if(currentLerp == 0.5f)
+        {
+            lerpTime = lerpTimeStart;
         }
 
+
+
+
         //run method for different behaviour based on variable
-        if (PlayerDistance < DistToFlee && fedBool == false)
+        if (PlayerDistance < DistToFlee)
         {
             fleeBool = true;
         }
@@ -133,7 +183,7 @@ public class LandBehaviours : MonoBehaviour
         {
             grazeBool = false;
             idleBool = false;
-            if (targetDist < 0.55 && PlayerDistance > DistToFlee)
+            if (targetDist < 0.55f && PlayerDistance > DistToFlee)
             {
                 enterGrazeTime -= Time.deltaTime;
                 if (enterGrazeTime < 0)
@@ -144,10 +194,6 @@ public class LandBehaviours : MonoBehaviour
                 }
             }
             Flee();
-        }
-        if (fedBool == true)
-        {
-            Follow();
         }
         if (grazeBool == true)
         {
@@ -176,6 +222,7 @@ public class LandBehaviours : MonoBehaviour
             {
                 currentlyFleeing = false;
                 fleeBool = false;
+                agent.isStopped = false;
                 grazeBool = true;
             }
             else if(agent.velocity == Vector3.zero)
@@ -185,25 +232,6 @@ public class LandBehaviours : MonoBehaviour
             }
 
             agent.SetDestination(target);
-        }
-
-        //following player Behaviour
-        void Follow()
-        {
-            if (targetDist <= 1)
-            {
-                agent.isStopped = true;
-            }
-            else
-            {
-                agent.isStopped = false;
-            }
-
-            if (PlayerDistance >= 10)
-            {
-                grazeBool = true;
-                fedBool = false;
-            }
         }
 
 
@@ -271,7 +299,14 @@ public class LandBehaviours : MonoBehaviour
         }
 
 
-
+        void lerpTimer()
+        {
+            lerpTime += Time.deltaTime / 2;
+            if (lerpTime > 1)
+            {
+                lerpTime = 1;
+            }
+        }
 
 
         //Cast to find current postion/new position if on correct layer
