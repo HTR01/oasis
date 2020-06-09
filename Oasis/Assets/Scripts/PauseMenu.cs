@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pause;
-    public GameObject achievements, settings, audioMenu, videoMenu;
-    public GameObject pauseEvent, achEvent, settEvent, audioEvent, videoEvent;
+    public GameObject achievements, settings, audioMenu, videoMenu, controlsMenu;
+    public GameObject pauseEvent, achEvent, settEvent, audioEvent, videoEvent, contEvent;
     bool isPaused = false;
     bool audioOn = false;
     bool videoOn = false;
@@ -122,6 +122,18 @@ public class PauseMenu : MonoBehaviour
         pause.SetActive(true);
         achOn = false;
         pauseEvent.SetActive(true); achEvent.SetActive(false);
+    }
+    public void Controls()
+    {
+        controlsMenu.SetActive(true);
+        settings.SetActive(false);
+        settEvent.SetActive(false); contEvent.SetActive(true);
+    }
+    public void ControlsBack()
+    {
+        settings.SetActive(true);
+        controlsMenu.SetActive(false);
+        settEvent.SetActive(true); contEvent.SetActive(false);
     }
 
     public void Pause()
