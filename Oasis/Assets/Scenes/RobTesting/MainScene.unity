@@ -197,6 +197,28 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7646193224630175584, guid: 05708efcd2bdbaa4582d0f9f398c21e0,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c339567d94c75c94d9afb7044994560d,
+        type: 3}
+    - target: {fileID: 7646193224630175584, guid: 05708efcd2bdbaa4582d0f9f398c21e0,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646193224630175584, guid: 05708efcd2bdbaa4582d0f9f398c21e0,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646193223221646792, guid: 05708efcd2bdbaa4582d0f9f398c21e0,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 515198058ce2acf4eb0d9341f619fd4b,
+        type: 3}
     - target: {fileID: 3693261353189063584, guid: 05708efcd2bdbaa4582d0f9f398c21e0,
         type: 3}
       propertyPath: m_IsActive
