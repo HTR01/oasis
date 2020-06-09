@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pause;
     public GameObject achievements, settings, audioMenu, videoMenu;
+    public GameObject pauseEvent, achEvent, settEvent, audioEvent, videoEvent;
     bool isPaused = false;
     bool audioOn = false;
     bool videoOn = false;
@@ -65,6 +66,7 @@ public class PauseMenu : MonoBehaviour
         achievements.SetActive(true);
         pause.SetActive(false);
         achOn = true;
+        pauseEvent.SetActive(false); achEvent.SetActive(true);
     }
     
     public void Settings()
@@ -72,6 +74,7 @@ public class PauseMenu : MonoBehaviour
         settings.SetActive(true);
         pause.SetActive(false);
         settingsOn = true;
+        pauseEvent.SetActive(false); settEvent.SetActive(true);
     }
 
     public void SettingsBack()
@@ -79,6 +82,7 @@ public class PauseMenu : MonoBehaviour
         settings.SetActive(false);
         pause.SetActive(true);
         settingsOn = false;
+        pauseEvent.SetActive(true); settEvent.SetActive(false);
     }
     public void Audio()
     {
@@ -86,6 +90,7 @@ public class PauseMenu : MonoBehaviour
         settings.SetActive(false);
         audioOn = true;
         settingsOn = false;
+        audioEvent.SetActive(true); settEvent.SetActive(false);
     }
     public void AudioBack()
     {
@@ -93,6 +98,7 @@ public class PauseMenu : MonoBehaviour
         audioMenu.SetActive(false);
         audioOn = false;
         settingsOn = true;
+        settEvent.SetActive(true); audioEvent.SetActive(false);
     }
     public void Video()
     {
@@ -100,6 +106,7 @@ public class PauseMenu : MonoBehaviour
         settings.SetActive(false);
         videoOn = true;
         settingsOn = false;
+        videoEvent.SetActive(true); settEvent.SetActive(false);
     }
     public void videoBack()
     {
@@ -107,12 +114,14 @@ public class PauseMenu : MonoBehaviour
         videoMenu.SetActive(false);
         videoOn = false;
         settingsOn = true;
+        settEvent.SetActive(true); videoEvent.SetActive(false);
     }
     public void AchievementsBack()
     {
         achievements.SetActive(false);
         pause.SetActive(true);
         achOn = false;
+        pauseEvent.SetActive(true); achEvent.SetActive(false);
     }
 
     public void Pause()
