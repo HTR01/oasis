@@ -14234,6 +14234,11 @@ PrefabInstance:
       propertyPath: ach09Img
       value: 
       objectReference: {fileID: 7646193224541771386}
+    - target: {fileID: 8569452543454269005, guid: fa151e4034869714cb83d27ca4111d75,
+        type: 3}
+      propertyPath: achActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa151e4034869714cb83d27ca4111d75, type: 3}
 --- !u!114 &7646193223791455857 stripped
@@ -15040,6 +15045,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783633998668344454, guid: d2f0c2688c3822b4a94952aa1535e07c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783633997831690614, guid: d2f0c2688c3822b4a94952aa1535e07c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783633999504885794, guid: d2f0c2688c3822b4a94952aa1535e07c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783633998118332663, guid: d2f0c2688c3822b4a94952aa1535e07c,
+        type: 3}
+      propertyPath: m_Text
+      value: You found a bison!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783633998992095839, guid: d2f0c2688c3822b4a94952aa1535e07c,
+        type: 3}
+      propertyPath: m_Text
+      value: Bison
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2f0c2688c3822b4a94952aa1535e07c, type: 3}
@@ -23536,6 +23566,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080094670484213456, guid: 6b248ef3f90a0084c9783fa3ad5e7174,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378766585, guid: 6b248ef3f90a0084c9783fa3ad5e7174, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 327201296, guid: 6b248ef3f90a0084c9783fa3ad5e7174, type: 3}
       propertyPath: m_RootOrder
