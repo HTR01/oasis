@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Swimming()
     {
-        float moveSprint = Input.GetAxis("Vertical") * (1 + Input.GetAxis("Sprint") * acceleration);
+        float moveSprint = Input.GetAxis("Vertical") * (1f + Input.GetAxis("Sprint") * acceleration / 3);
         Vector3 moveX = moveSprint * cam.GetComponent<MouseLook>().Ahead;
         Vector3 moveZ = Input.GetAxis("Horizontal") * cam.GetComponent<MouseLook>().Side;
 
