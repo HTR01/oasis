@@ -1,36 +1,62 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class WaterBehaviours : MonoBehaviour
 {
-    public GameObject[] Waypoints;
-    GameObject player;
+    public static GameObject[] _waypoints;
+    Transform[] _waypointTransform;
+    [SerializeField] GameObject player;
     Transform targetWaypoint;
     int index;
     float dist, playerDist;
-    public float fleeDist = 10;
-    
+    [SerializeField] float fleeDist = 10;
+
+    GameObject attachedObj;
     Rigidbody rb;
 
-    bool fleeBool;
+    bool fleeBool, currentlyFleeing;
     //detecting furthest point from player
     float farDist;
     float curDist;
     GameObject fleeTo;
+    Vector3 target;
+    GameObject furthestObj;
 
-
-
-    List<GameObject> waypointList = new List<GameObject>();
-    List<float> distances = new List<float>();
-
-
+    public Dictionary<float, GameObject> waypointToDist = new Dictionary<float, GameObject>();
+    public List<GameObject> waypointList;
 
     //Movement
-        //Directions
+    //Directions
     Vector3 dir, oldDir, targetSite;
-        //Speed
+    float t = 0;
+
+    //Speed
     public float speed;
+
+
+
+    //GameObject furthestObj;
+    GameObject getFurthestGO(List<GameObject> OBJSConsidered)
+    {
+        Debug.Log(OBJSConsidered.Count);
+        float furthestDist = 0;
+
+        foreach (var obj in OBJSConsidered)
+        {
+            float dist = Vector3.Distance(transform.position, obj.transform.position);
+            if (dist > furthestDist)
+            {
+                furthestDist = dist;
+                furthestObj = obj;
+                //print(obj.name);
+            }
+        }
+        //print(furthestObj.name + "farOBJ");
+        return furthestObj;
+    }
+
 
     Vector3 RandomPointOnTarget(Vector3 center)
     {
@@ -44,104 +70,128 @@ public class WaterBehaviours : MonoBehaviour
         return result;
     }
 
+    Transform waypointPos(GameObject[] _selection)
+    {
+        index = Random.Range(0, _waypoints.Length - 1);
+        Transform pos = _waypoints[index].transform;
+        return pos;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        index = Random.Range(0, (Waypoints.Length - 1));
-        GameObject.FindGameObjectsWithTag("Waypoints");
+        attachedObj = this.gameObject;
+        rb = attachedObj.GetComponent<Rigidbody>();
+        fleeBool = false;
+        _waypoints = GameObject.FindGameObjectsWithTag("Waypoints");
         targetSite = RandomPointOnTarget(transform.position);
         player = GameObject.Find("PlayerMaster");
+        oldDir = Vector3.zero;
+    }
 
-        foreach (GameObject obj in Waypoints)
-        {
-            waypointList.Add(obj);
-        }
-
-        foreach (GameObject site in waypointList)
-        {
-            float distance = Vector3.Distance(transform.position, site.transform.position);
-            distances.Add(distance);
-        }
-
-
-        Dictionary<GameObject, float> waypointToDist = new Dictionary<GameObject, float>();
-        foreach (GameObject obj in waypointList)
-        {
-            float dist = Vector3.Distance(transform.position, obj.transform.position);
-            waypointToDist.Add(obj, dist);
-        }
-
-        List<waypointList>.get(waypointList[0]);
+    IEnumerator PopList()
+    {
+        yield return new WaitForSeconds(0.1f);
+        waypointList.AddRange(_waypoints);
+        StopCoroutine("PopList");
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(furthestObj.name);
 
-        print(curDist + "near");
-        print(farDist + "far");
-
-        if (dist < 3)
+        if (waypointList.Count == 0)
         {
-            fleeBool = true;
-            print(fleeBool);
-            flee();
+            StartCoroutine("PopList");
+        }
+
+        //movement
+        dir = (target - transform.position).normalized;
+        if (oldDir == Vector3.zero)
+        {
+            print(rb);
+            rb.velocity = dir * speed;
         }
         else
         {
-            fleeBool = false;
+            LerpTime();
+            rb.velocity = Vector3.Lerp(oldDir, dir, t) * speed;
+            print(oldDir);
         }
 
-        //    targetWaypoint = Waypoints[index].transform;
-
-        dist = Vector3.Distance(transform.position, fleeTo.transform.position);
-        //    playerDist = Vector3.Distance(transform.position, player.transform.position);
-
-
-        //    if (playerDist < fleeDist)
-        //    {
-        //        flee();
-        //    }
-        //    else
-        //    {
-        //        patrol();
-        //    }
-        //    rb.velocity = dir * speed;
-
-
-        //}
-
-
-
-        //void patrol()
-        //{
-
-        //}
-
-        void flee()
+        //check if fleeing or not
+        if (fleeBool == false)
         {
-            foreach (GameObject site in Waypoints)
+            Patrol();
+        }
+        else
+        {
+            Flee();
+        }
+
+        //if the player is within range, set to fleeing
+        if (playerDist < fleeDist)
+        {
+            fleeBool = true;
+        }
+
+
+        void Patrol()
+        {
+            if(target == null)
             {
-                curDist = Vector3.Distance(transform.position, site.transform.position);
-
-                if (curDist > farDist)
-                {
-                    farDist = curDist;
-                    fleeTo = site;
-                }
-
-                //print(Vector3.Distance(transform.position, site.transform.position) + site.name);
-                //print(fleeTo.name);
-
-
-
-
-
+                target = waypointPos(_waypoints).position;
+            }
+            //if object is within range, choose a new location to move to at random
+            if (dist < 0.5f)
+            {
+                target = waypointPos(_waypoints).position;
+                oldDir = dir;
             }
         }
+
+        void Flee()
+        {
+            if (currentlyFleeing == false)
+            {
+                if (target != getFurthestGO(waypointList).transform.position)
+                {
+                    checkForFurthest();
+                    currentlyFleeing = true;
+                }
+            }
+        }
+
+
+
+        void checkForFurthest()
+        {
+            target = getFurthestGO(waypointList).transform.position;
+        }
+
+
+
+
+        //print(furthestObj);
+
+        //  getFurthestGO(waypointList);
+        //RandomPointOnTarget(transform.position);
+        //target.position = furthestObj.transform.position;
+        //print(target.position);
+
+
     }
+
+    void LerpTime()
+    {
+        t = Mathf.Clamp(t, 0, 1);
+        if (t <= 1)
+        {
+            t += Time.deltaTime / 2;
+        }
+    }
+
 }
 
 
