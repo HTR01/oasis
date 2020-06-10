@@ -10,9 +10,10 @@ public class WaterBehaviours : MonoBehaviour
     [SerializeField] GameObject player;
     Transform targetWaypoint;
     int index;
-    float dist, playerDist;
+    float dist, playerDist, targDist;
     [SerializeField] float fleeDist = 10;
 
+    GameObject targetObj;
     GameObject attachedObj;
     Rigidbody rb;
 
@@ -21,7 +22,7 @@ public class WaterBehaviours : MonoBehaviour
     float farDist;
     float curDist;
     GameObject fleeTo;
-    Vector3 target;
+    Transform target = null;
     GameObject furthestObj;
 
     public Dictionary<float, GameObject> waypointToDist = new Dictionary<float, GameObject>();
@@ -40,7 +41,6 @@ public class WaterBehaviours : MonoBehaviour
     //GameObject furthestObj;
     GameObject getFurthestGO(List<GameObject> OBJSConsidered)
     {
-        Debug.Log(OBJSConsidered.Count);
         float furthestDist = 0;
 
         foreach (var obj in OBJSConsidered)
@@ -70,10 +70,10 @@ public class WaterBehaviours : MonoBehaviour
         return result;
     }
 
-    Transform waypointPos(GameObject[] _selection)
+    GameObject waypointPos(GameObject[] _selection)
     {
         index = Random.Range(0, _waypoints.Length - 1);
-        Transform pos = _waypoints[index].transform;
+        GameObject pos = _waypoints[index];
         return pos;
     }
 
@@ -93,31 +93,39 @@ public class WaterBehaviours : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         waypointList.AddRange(_waypoints);
+
         StopCoroutine("PopList");
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(furthestObj.name);
+        if (targetObj == null)
+        {
+            targetObj = waypointPos(_waypoints);
+        }
+        target = targetObj.transform;
+        targDist = Vector3.Distance(transform.position, targetObj.transform.position);
+
+        print(waypointPos(_waypoints));
 
         if (waypointList.Count == 0)
         {
             StartCoroutine("PopList");
         }
 
+        print(fleeBool);
+
         //movement
-        dir = (target - transform.position).normalized;
+        dir = (target.position - transform.position).normalized;
         if (oldDir == Vector3.zero)
         {
-            print(rb);
             rb.velocity = dir * speed;
         }
         else
         {
             LerpTime();
             rb.velocity = Vector3.Lerp(oldDir, dir, t) * speed;
-            print(oldDir);
         }
 
         //check if fleeing or not
@@ -139,14 +147,20 @@ public class WaterBehaviours : MonoBehaviour
 
         void Patrol()
         {
+            print(target + "target");
+            print(dist);
             if(target == null)
             {
-                target = waypointPos(_waypoints).position;
+                targetObj = waypointPos(_waypoints);
+                target.position = targetObj.transform.position;
+                print("targetNull");
             }
             //if object is within range, choose a new location to move to at random
             if (dist < 0.5f)
             {
-                target = waypointPos(_waypoints).position;
+                print("hit");
+                targetObj = waypointPos(_waypoints);
+                target.position = targetObj.transform.position;
                 oldDir = dir;
             }
         }
@@ -155,7 +169,7 @@ public class WaterBehaviours : MonoBehaviour
         {
             if (currentlyFleeing == false)
             {
-                if (target != getFurthestGO(waypointList).transform.position)
+                if (target.position != getFurthestGO(waypointList).transform.position)
                 {
                     checkForFurthest();
                     currentlyFleeing = true;
@@ -167,7 +181,7 @@ public class WaterBehaviours : MonoBehaviour
 
         void checkForFurthest()
         {
-            target = getFurthestGO(waypointList).transform.position;
+            target.position = getFurthestGO(waypointList).transform.position;
         }
 
 
