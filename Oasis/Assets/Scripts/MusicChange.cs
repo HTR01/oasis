@@ -6,6 +6,8 @@ public class MusicChange : MonoBehaviour
 {
     public AudioSource land;
     public AudioSource underwater;
+    public AudioSource waterAmbience;
+    public AudioSource landAmbience;
     bool isLandPlaying = true;
     bool isWaterPlaying = false;
 
@@ -21,14 +23,18 @@ public class MusicChange : MonoBehaviour
         if(PlayerMovement.water == true && (isLandPlaying == true && isWaterPlaying == false))
         {
             underwater.Play();
+            waterAmbience.Play();
             land.Stop();
+            landAmbience.Stop();
             isLandPlaying = false;
             isWaterPlaying = true;
         }
         if (PlayerMovement.water == false && (isLandPlaying == false && isWaterPlaying == true))
         {
             underwater.Stop();
+            waterAmbience.Stop();
             land.Play();
+            landAmbience.Play();
             isLandPlaying = true;
             isWaterPlaying = false;
         }
