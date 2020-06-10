@@ -18,11 +18,12 @@ public class WaterBehaviours : MonoBehaviour
     Rigidbody rb;
 
     bool fleeBool, currentlyFleeing;
+    bool newDir = false;
     //detecting furthest point from player
     float farDist;
     float curDist;
     GameObject fleeTo;
-    Transform target = null;
+    Vector3 target;
     GameObject furthestObj;
 
     public Dictionary<float, GameObject> waypointToDist = new Dictionary<float, GameObject>();
@@ -34,11 +35,11 @@ public class WaterBehaviours : MonoBehaviour
     float t = 0;
 
     //Speed
-    public float speed;
+    float speed = 25;
 
 
 
-    //GameObject furthestObj;
+    //Find Object within array furthest from current point
     GameObject getFurthestGO(List<GameObject> OBJSConsidered)
     {
         float furthestDist = 0;
@@ -50,14 +51,12 @@ public class WaterBehaviours : MonoBehaviour
             {
                 furthestDist = dist;
                 furthestObj = obj;
-                //print(obj.name);
             }
         }
-        //print(furthestObj.name + "farOBJ");
         return furthestObj;
     }
 
-
+    //Find a random spot in the area around a point
     Vector3 RandomPointOnTarget(Vector3 center)
     {
         Vector3 result = center;
@@ -70,9 +69,10 @@ public class WaterBehaviours : MonoBehaviour
         return result;
     }
 
+    //Find a random object within the desired array
     GameObject waypointPos(GameObject[] _selection)
     {
-        index = Random.Range(0, _waypoints.Length - 1);
+        index = Random.Range(0, _waypoints.Length);
         GameObject pos = _waypoints[index];
         return pos;
     }
@@ -80,15 +80,16 @@ public class WaterBehaviours : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Assign everything
         attachedObj = this.gameObject;
         rb = attachedObj.GetComponent<Rigidbody>();
         fleeBool = false;
         _waypoints = GameObject.FindGameObjectsWithTag("Waypoints");
         targetSite = RandomPointOnTarget(transform.position);
-        player = GameObject.Find("PlayerMaster");
         oldDir = Vector3.zero;
     }
 
+    //Populate the waypoint list with the objects in the waypoint array
     IEnumerator PopList()
     {
         yield return new WaitForSeconds(0.1f);
@@ -100,28 +101,44 @@ public class WaterBehaviours : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        waypointPos(_waypoints);
+        
+        //Assign targetObj to a random waypoint object. Assign target position to the transform position of the object
         if (targetObj == null)
         {
             targetObj = waypointPos(_waypoints);
         }
-        target = targetObj.transform;
-        targDist = Vector3.Distance(transform.position, targetObj.transform.position);
+        else
+        {
+            target = targetObj.transform.position;
+        }
 
-        print(waypointPos(_waypoints));
-
+        //Find distance between scriptholder and the position declared as being the target
+        targDist = Vector3.Distance(transform.position, target);
+        playerDist = Vector3.Distance(transform.position, player.transform.position);
+        
+        
+        //On initializing, run the PopList coroutine to populate the waypointList
         if (waypointList.Count == 0)
         {
             StartCoroutine("PopList");
         }
 
-        print(fleeBool);
-
-        //movement
-        dir = (target.position - transform.position).normalized;
+         
+        
+            //movement (Constant)
+       
+        //Find Direction to target
+        dir = (target - transform.position).normalized;
+      
+        
+        //if there is nothing in old direction, set the rigidbody's velocity to the speed variable, multiplied by the direction to get to the target
         if (oldDir == Vector3.zero)
         {
             rb.velocity = dir * speed;
         }
+        // if there is an Old direction, use a lerp to turn smoothly to face the new direction
         else
         {
             LerpTime();
@@ -143,60 +160,72 @@ public class WaterBehaviours : MonoBehaviour
         {
             fleeBool = true;
         }
+        
+        
 
-
-        void Patrol()
-        {
-            print(target + "target");
-            print(dist);
-            if(target == null)
-            {
-                targetObj = waypointPos(_waypoints);
-                target.position = targetObj.transform.position;
-                print("targetNull");
-            }
-            //if object is within range, choose a new location to move to at random
-            if (dist < 0.5f)
-            {
-                print("hit");
-                targetObj = waypointPos(_waypoints);
-                target.position = targetObj.transform.position;
-                oldDir = dir;
-            }
-        }
-
-        void Flee()
-        {
-            if (currentlyFleeing == false)
-            {
-                if (target.position != getFurthestGO(waypointList).transform.position)
-                {
-                    checkForFurthest();
-                    currentlyFleeing = true;
-                }
-            }
-        }
-
-
-
-        void checkForFurthest()
-        {
-            target.position = getFurthestGO(waypointList).transform.position;
-        }
-
-
-
-
-        //print(furthestObj);
-
-        //  getFurthestGO(waypointList);
-        //RandomPointOnTarget(transform.position);
-        //target.position = furthestObj.transform.position;
-        //print(target.position);
-
-
+        print(targetObj);
     }
 
+
+
+
+    void Flee()
+    {
+        //If bool conditions are true, Find the furthest point away and flee in direction
+        if (currentlyFleeing == false)
+        {
+            speed = 50;
+            if (target != getFurthestGO(waypointList).transform.position)
+            {
+                checkForFurthest();
+                currentlyFleeing = true;
+            }
+        }
+        else if (currentlyFleeing == true && targDist < 1.5f)
+        {
+            speed = 25;
+            currentlyFleeing = false;
+            fleeBool = false;
+        }
+    }
+    
+    void Patrol()
+    {
+        //if object is within range, assign the old direction to current direction, then choose a new location to move to at random.
+        if (targDist < 0.25f && newDir == false)
+        {
+            oldDir = dir;
+            targetObj = waypointPos(_waypoints);
+            target = targetObj.transform.position;
+            newDir = true;
+        }
+        else
+        {
+            newDir = false;
+        }
+    }
+
+
+
+    void checkForFurthest()
+    {
+        targetObj = getFurthestGO(waypointList);
+        target = targetObj.transform.position;
+    }
+
+
+
+    void OnCollisionEnter(Collision col)
+    {
+        targetObj = waypointPos(_waypoints);
+        target = targetObj.transform.position;
+        print("hit");
+    }
+
+
+
+
+    //Timer for lerping being direction and old direction
     void LerpTime()
     {
         t = Mathf.Clamp(t, 0, 1);
