@@ -6,19 +6,7 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: BisonWalk
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bison2_blinn1SG1
-    second: {fileID: -2453688846518231837, guid: ea089647b44bddd49abde88ee34242cf,
-      type: 3}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bison2_lambert3SG1
-    second: {fileID: -644797367835707570, guid: ea089647b44bddd49abde88ee34242cf,
-      type: 3}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

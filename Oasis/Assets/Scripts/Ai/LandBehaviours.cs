@@ -37,7 +37,7 @@ public class LandBehaviours : MonoBehaviour
     public float grazeMin, grazeMax;
 
     float enterGrazeTime;
-    public float enterGrazeTimeStart;
+    float enterGrazeTimeStart;
 
     //idle Timer
     float idleExit, idleExitStart;

@@ -102,6 +102,8 @@ public class WaterBehaviours : MonoBehaviour
     void Update()
     {
 
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), 0.15F);
+
         waypointPos(_waypoints);
         
         //Assign targetObj to a random waypoint object. Assign target position to the transform position of the object
