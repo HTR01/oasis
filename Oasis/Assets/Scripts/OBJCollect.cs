@@ -28,8 +28,7 @@ public class OBJCollect : MonoBehaviour
         {
             if (col.name == "Achievement1")
             {
-                GameAnalytics.NewDesignEvent("Achievement", 1);
-                GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Tutorial");
+                GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Achievement1");
                 Destroy(col.gameObject);
                 ach.Ach01();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement1" + ".jpg");
@@ -37,7 +36,7 @@ public class OBJCollect : MonoBehaviour
             }
             if (col.name == "Achievement2")
             {
-                GameAnalytics.NewDesignEvent("Achievement", 2);
+                GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Achievement2");
                 Destroy(col.gameObject);
                 ach.Ach02();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement2" + ".jpg");
@@ -45,7 +44,7 @@ public class OBJCollect : MonoBehaviour
             }
             if (col.name == "Achievement3")
             {
-                GameAnalytics.NewDesignEvent("Achievement", 3);
+                GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Achievement3");
                 Destroy(col.gameObject);
                 ach.Ach03();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement3" + ".jpg");
@@ -53,7 +52,7 @@ public class OBJCollect : MonoBehaviour
             }
             if (col.name == "Achievement4")
             {
-                GameAnalytics.NewDesignEvent("Achievement", 4);
+                GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Achievement4");
                 Destroy(col.gameObject);
                 ach.Ach04();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement4" + ".jpg");
@@ -61,7 +60,7 @@ public class OBJCollect : MonoBehaviour
             }
             if (col.name == "Achievement5")
             {
-                GameAnalytics.NewDesignEvent("Achievement", 5);
+                GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Achievement5");
                 Destroy(col.gameObject);
                 ach.Ach05();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement5" + ".jpg");
@@ -69,7 +68,7 @@ public class OBJCollect : MonoBehaviour
             }
             if (col.name == "Achievement6")
             {
-                GameAnalytics.NewDesignEvent("Achievement", 6);
+                GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Achievement6");
                 Destroy(col.gameObject);
                 ach.Ach06();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement6" + ".jpg");
@@ -77,7 +76,7 @@ public class OBJCollect : MonoBehaviour
             }
             if (col.name == "Achievement7")
             {
-                GameAnalytics.NewDesignEvent("Achievement", 7);
+                GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Achievement7");
                 Destroy(col.gameObject);
                 ach.Ach07();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement7" + ".jpg");
@@ -85,7 +84,7 @@ public class OBJCollect : MonoBehaviour
             }
             if (col.name == "Achievement8")
             {
-                GameAnalytics.NewDesignEvent("Achievement", 8);
+                GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Achievement8");
                 Destroy(col.gameObject);
                 ach.Ach08();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement8" + ".jpg");
@@ -93,7 +92,7 @@ public class OBJCollect : MonoBehaviour
             }
             if (col.name == "Achievement9")
             {
-                GameAnalytics.NewDesignEvent("Achievement", 9);
+                GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Achievement9");
                 Destroy(col.gameObject);
                 ach.Ach09();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement9" + ".jpg");
