@@ -23,15 +23,6 @@ public class OBJCollect : MonoBehaviour
             System.IO.Directory.CreateDirectory(m_Path);
         }
     }
-
-    private void Update()
-    {
-        if(achNum == 9)
-        {
-            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
-        }
-    }
-
     private void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Collectable")
@@ -45,6 +36,10 @@ public class OBJCollect : MonoBehaviour
                 achievement1.SetActive(true);
                 achievement1a.SetActive(false);
                 achNum++;
+                if (achNum == 9)
+                {
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                }
             }
             if (col.name == "Achievement2")
             {
@@ -55,6 +50,10 @@ public class OBJCollect : MonoBehaviour
                 achievement2.SetActive(true);
                 achievement2a.SetActive(false);
                 achNum++;
+                if (achNum == 9)
+                {
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                }
             }
             if (col.name == "Achievement3")
             {
@@ -65,6 +64,10 @@ public class OBJCollect : MonoBehaviour
                 achievement3.SetActive(true);
                 achievement3a.SetActive(false);
                 achNum++;
+                if (achNum == 9)
+                {
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                }
             }
             if (col.name == "Achievement4")
             {
@@ -75,6 +78,10 @@ public class OBJCollect : MonoBehaviour
                 achievement4.SetActive(true);
                 achievement4a.SetActive(false);
                 achNum++;
+                if (achNum == 9)
+                {
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                }
             }
             if (col.name == "Achievement5")
             {
@@ -85,6 +92,10 @@ public class OBJCollect : MonoBehaviour
                 achievement5.SetActive(true);
                 achievement5a.SetActive(false);
                 achNum++;
+                if (achNum == 9)
+                {
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                }
             }
             if (col.name == "Achievement6")
             {
@@ -95,6 +106,10 @@ public class OBJCollect : MonoBehaviour
                 achievement6.SetActive(true);
                 achievement6a.SetActive(false);
                 achNum++;
+                if (achNum == 9)
+                {
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                }
             }
             if (col.name == "Achievement7")
             {
@@ -105,6 +120,10 @@ public class OBJCollect : MonoBehaviour
                 achievement7.SetActive(true);
                 achievement7a.SetActive(false);
                 achNum++;
+                if (achNum == 9)
+                {
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                }
             }
             if (col.name == "Achievement8")
             {
@@ -115,6 +134,10 @@ public class OBJCollect : MonoBehaviour
                 achievement8.SetActive(true);
                 achievement8a.SetActive(false);
                 achNum++;
+                if (achNum == 9)
+                {
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                }
             }
             if (col.name == "Achievement9")
             {
@@ -125,6 +148,10 @@ public class OBJCollect : MonoBehaviour
                 achievement9.SetActive(true);
                 achievement9a.SetActive(false);
                 achNum++;
+                if (achNum == 9)
+                {
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                }
             }
         }
     }

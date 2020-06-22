@@ -165,7 +165,7 @@ public class WaterBehaviours : MonoBehaviour
         
         
 
-        print(targetObj);
+        //print(targetObj);
     }
 
 
@@ -221,7 +221,7 @@ public class WaterBehaviours : MonoBehaviour
     {
         targetObj = waypointPos(_waypoints);
         target = targetObj.transform.position;
-        print("hit");
+        //print("hit");
     }
 
 
