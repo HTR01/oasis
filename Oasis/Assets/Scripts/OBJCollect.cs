@@ -10,7 +10,9 @@ public class OBJCollect : MonoBehaviour
     string m_Path;
     public GameObject achievement1;
     public GameObject achievement2, achievement3, achievement4, achievement5, achievement6, achievement7, achievement8, achievement9;
+    public GameObject achievement1a, achievement2a, achievement3a, achievement4a, achievement5a, achievement6a, achievement7a, achievement8a, achievement9a;
     public Achievements ach;
+    int achNum = 0;
 
     void Start()
     {
@@ -19,6 +21,14 @@ public class OBJCollect : MonoBehaviour
         if (!Directory.Exists(m_Path))
         {
             System.IO.Directory.CreateDirectory(m_Path);
+        }
+    }
+
+    private void Update()
+    {
+        if(achNum == 9)
+        {
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
         }
     }
 
@@ -33,6 +43,8 @@ public class OBJCollect : MonoBehaviour
                 ach.Ach01();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement1" + ".jpg");
                 achievement1.SetActive(true);
+                achievement1a.SetActive(false);
+                achNum++;
             }
             if (col.name == "Achievement2")
             {
@@ -41,6 +53,8 @@ public class OBJCollect : MonoBehaviour
                 ach.Ach02();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement2" + ".jpg");
                 achievement2.SetActive(true);
+                achievement2a.SetActive(false);
+                achNum++;
             }
             if (col.name == "Achievement3")
             {
@@ -49,6 +63,8 @@ public class OBJCollect : MonoBehaviour
                 ach.Ach03();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement3" + ".jpg");
                 achievement3.SetActive(true);
+                achievement3a.SetActive(false);
+                achNum++;
             }
             if (col.name == "Achievement4")
             {
@@ -57,6 +73,8 @@ public class OBJCollect : MonoBehaviour
                 ach.Ach04();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement4" + ".jpg");
                 achievement4.SetActive(true);
+                achievement4a.SetActive(false);
+                achNum++;
             }
             if (col.name == "Achievement5")
             {
@@ -65,6 +83,8 @@ public class OBJCollect : MonoBehaviour
                 ach.Ach05();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement5" + ".jpg");
                 achievement5.SetActive(true);
+                achievement5a.SetActive(false);
+                achNum++;
             }
             if (col.name == "Achievement6")
             {
@@ -73,6 +93,8 @@ public class OBJCollect : MonoBehaviour
                 ach.Ach06();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement6" + ".jpg");
                 achievement6.SetActive(true);
+                achievement6a.SetActive(false);
+                achNum++;
             }
             if (col.name == "Achievement7")
             {
@@ -81,6 +103,8 @@ public class OBJCollect : MonoBehaviour
                 ach.Ach07();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement7" + ".jpg");
                 achievement7.SetActive(true);
+                achievement7a.SetActive(false);
+                achNum++;
             }
             if (col.name == "Achievement8")
             {
@@ -89,6 +113,8 @@ public class OBJCollect : MonoBehaviour
                 ach.Ach08();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement8" + ".jpg");
                 achievement8.SetActive(true);
+                achievement8a.SetActive(false);
+                achNum++;
             }
             if (col.name == "Achievement9")
             {
@@ -97,6 +123,8 @@ public class OBJCollect : MonoBehaviour
                 ach.Ach09();
                 ScreenCapture.CaptureScreenshot(m_Path + "Achievement9" + ".jpg");
                 achievement9.SetActive(true);
+                achievement9a.SetActive(false);
+                achNum++;
             }
         }
     }
