@@ -16562,6 +16562,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8860756562076213004, guid: d5ec79f5fd2884b44b9516e0ae1d2491,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 515198058ce2acf4eb0d9341f619fd4b,
+        type: 3}
+    - target: {fileID: 8860756562102182376, guid: d5ec79f5fd2884b44b9516e0ae1d2491,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 515198058ce2acf4eb0d9341f619fd4b,
+        type: 3}
+    - target: {fileID: 8860756563259630988, guid: d5ec79f5fd2884b44b9516e0ae1d2491,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 515198058ce2acf4eb0d9341f619fd4b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5ec79f5fd2884b44b9516e0ae1d2491, type: 3}
 --- !u!1001 &1163032030
