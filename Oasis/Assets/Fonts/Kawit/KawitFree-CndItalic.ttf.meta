@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 56d320883f8145c478e0372cd3169c12
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Kawit Free
+  fontNames:
+  - Kawit Free
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 16fac25101af4854ca6fd9f26a9fb956, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
