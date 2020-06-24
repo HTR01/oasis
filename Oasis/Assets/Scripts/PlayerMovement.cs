@@ -110,6 +110,14 @@ public class PlayerMovement : MonoBehaviour
         
         move = moveX + moveZ;
         controller.Move(move * speed * Time.deltaTime);
+        if (Input.GetButton("Jump"))
+        {
+            transform.position += new Vector3(0, 0.5f, 0);
+        }
+        if (Input.GetButton("SlowWalk"))
+        {
+            transform.position -= new Vector3(0, 0.5f, 0);
+        }
     }
 
     private void OnTriggerStay(Collider other)
