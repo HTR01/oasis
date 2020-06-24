@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject cam;
     float sprint;
     float acceleration = 1.5f;
+    public Camera FPCam;
 
 
     private void Start()
@@ -82,22 +83,26 @@ public class PlayerMovement : MonoBehaviour
         {
             speed = speed / 2;
             isCrouched = true;
+            FPCam.fieldOfView = 50;
         }
 
         if (Input.GetButtonUp("SlowWalk"))
         {
             speed = speed * 2;
             isCrouched = false;
+            FPCam.fieldOfView = 60;
         }
 
         if (Input.GetButtonDown("Sprint") && water == false)
         {
             speed = sprintSpeed;
+            FPCam.fieldOfView = 70;
         }
 
         if (Input.GetButtonUp("Sprint") && water == false)
         {
             speed = baseSpeed;
+            FPCam.fieldOfView = 60;
         }
     }
 
