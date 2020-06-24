@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pause;
     public GameObject achievements, settings, audioMenu, videoMenu, controlsMenu;
     public GameObject pauseEvent, achEvent, settEvent, audioEvent, videoEvent, contEvent;
+    public GameObject pausePanel;
     bool isPaused = false;
     bool audioOn = false;
     bool videoOn = false;
@@ -58,6 +59,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
         achievements.SetActive(false);
         settings.SetActive(false);
+        pausePanel.SetActive(false);
         
     }
 
@@ -143,6 +145,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         isPaused = true;
+        pausePanel.SetActive(true);
     }
 
     public void Quit()
