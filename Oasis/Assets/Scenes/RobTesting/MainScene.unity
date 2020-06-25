@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 87c0b1d0219f0c347a07ff91f41a7e58
+  m_OcclusionCullingData: {fileID: 36300000, guid: 5e16bdd69b967ef48841e3a87c03194b,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -157,6 +158,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pref_Mushroom_Small_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613191374558848671, guid: d740428287bbb6a4799b35ab3c87c536,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5506656826833878733, guid: d740428287bbb6a4799b35ab3c87c536,
         type: 3}
@@ -359,6 +365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Grass_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1446285176469330, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4544453657683510, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 104.5057
@@ -549,6 +559,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cartoon Seaweed 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 142206, guid: 9780aeebf3a9e0a439c8142c5343a530, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9780aeebf3a9e0a439c8142c5343a530, type: 3}
 --- !u!64 &28087210
@@ -601,6 +615,10 @@ PrefabInstance:
     - target: {fileID: 1446285176469330, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
       propertyPath: m_Name
       value: Prefab_Grass_01 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446285176469330, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4544453657683510, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -870,9 +888,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 99473611}
     m_Modifications:
+    - target: {fileID: 1106780517565034, guid: 3357b1a18f01b3346872a72dd1ef8a21, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109774452815802, guid: 3357b1a18f01b3346872a72dd1ef8a21, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063376172813926, guid: 3357b1a18f01b3346872a72dd1ef8a21, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1683059088162282, guid: 3357b1a18f01b3346872a72dd1ef8a21, type: 3}
       propertyPath: m_Name
       value: Cartoon Seaweed modul3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683059088162282, guid: 3357b1a18f01b3346872a72dd1ef8a21, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4715660629912294, guid: 3357b1a18f01b3346872a72dd1ef8a21, type: 3}
       propertyPath: m_LocalPosition.x
@@ -929,6 +963,26 @@ PrefabInstance:
     - target: {fileID: 4715660629912294, guid: 3357b1a18f01b3346872a72dd1ef8a21, type: 3}
       propertyPath: m_LocalScale.z
       value: 8.743568
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723865734169564, guid: 3357b1a18f01b3346872a72dd1ef8a21, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843390476935866, guid: 3357b1a18f01b3346872a72dd1ef8a21, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935261582976332, guid: 3357b1a18f01b3346872a72dd1ef8a21, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1617343373707828, guid: 3357b1a18f01b3346872a72dd1ef8a21, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142496606013730, guid: 3357b1a18f01b3346872a72dd1ef8a21, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3357b1a18f01b3346872a72dd1ef8a21, type: 3}
@@ -1311,6 +1365,10 @@ PrefabInstance:
     - target: {fileID: 1446285176469330, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
       propertyPath: m_Name
       value: Prefab_Grass_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446285176469330, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4544453657683510, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1786,6 +1844,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Grass_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1446285176469330, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4544453657683510, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 87.239
@@ -2004,6 +2066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Grass_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1446285176469330, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4544453657683510, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 105.71999
@@ -2073,6 +2139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cartoon Seaweed modul5
       objectReference: {fileID: 0}
+    - target: {fileID: 1009604878803322, guid: d932e4a639e15ce47b415d7ac260f509, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4083197128975412, guid: d932e4a639e15ce47b415d7ac260f509, type: 3}
       propertyPath: m_LocalPosition.x
       value: 121.99
@@ -2128,6 +2198,42 @@ PrefabInstance:
     - target: {fileID: 4083197128975412, guid: d932e4a639e15ce47b415d7ac260f509, type: 3}
       propertyPath: m_LocalScale.z
       value: 7.9167
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823778860850104, guid: d932e4a639e15ce47b415d7ac260f509, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825461269961840, guid: d932e4a639e15ce47b415d7ac260f509, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895019475664992, guid: d932e4a639e15ce47b415d7ac260f509, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893289881992162, guid: d932e4a639e15ce47b415d7ac260f509, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1858018525801540, guid: d932e4a639e15ce47b415d7ac260f509, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411837557946026, guid: d932e4a639e15ce47b415d7ac260f509, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570119377498434, guid: d932e4a639e15ce47b415d7ac260f509, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663159968187954, guid: d932e4a639e15ce47b415d7ac260f509, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1387501471722456, guid: d932e4a639e15ce47b415d7ac260f509, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d932e4a639e15ce47b415d7ac260f509, type: 3}
@@ -2347,6 +2453,10 @@ PrefabInstance:
     - target: {fileID: 142206, guid: 9780aeebf3a9e0a439c8142c5343a530, type: 3}
       propertyPath: m_Name
       value: Cartoon Seaweed 3.5 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 142206, guid: 9780aeebf3a9e0a439c8142c5343a530, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9780aeebf3a9e0a439c8142c5343a530, type: 3}
@@ -3332,6 +3442,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pref_Crystal_Large_05
       objectReference: {fileID: 0}
+    - target: {fileID: 4344813449193426732, guid: 72a2657c36792fa4b98f61fb43830bd1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6882371536631099039, guid: 72a2657c36792fa4b98f61fb43830bd1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4021,9 +4136,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 274842711}
     m_Modifications:
+    - target: {fileID: 1036259849633954, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1088336914985292, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
       propertyPath: m_Name
       value: Cartoon Seaweed modul1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088336914985292, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4600282876783476, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4080,6 +4203,58 @@ PrefabInstance:
     - target: {fileID: 4600282876783476, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
       propertyPath: m_LocalScale.z
       value: 8.537701
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997324127024212, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888231906382756, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420988182214958, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480727482895398, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1484695146968832, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556224610334166, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684522648684648, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618865279128604, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185673383121336, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291391365988822, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396162490982628, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365590526237834, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656010037138532, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
@@ -4154,9 +4329,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 99473611}
     m_Modifications:
+    - target: {fileID: 1036259849633954, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1088336914985292, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
       propertyPath: m_Name
       value: Cartoon Seaweed modul1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088336914985292, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4600282876783476, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4234,6 +4417,58 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 174a39d4af1534e46bef95b52fa1b6de, type: 2}
+    - target: {fileID: 1997324127024212, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888231906382756, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420988182214958, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480727482895398, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1484695146968832, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556224610334166, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684522648684648, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618865279128604, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185673383121336, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291391365988822, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396162490982628, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365590526237834, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656010037138532, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
 --- !u!64 &400665259
@@ -4770,6 +5005,36 @@ PrefabInstance:
       propertyPath: achievement9a
       value: 
       objectReference: {fileID: 1956657899}
+    - target: {fileID: 2378167501538516579, guid: ad770fc94862d2c4c8d7b30224938b15,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378167501538516579, guid: ad770fc94862d2c4c8d7b30224938b15,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.16676496
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378167501538516579, guid: ad770fc94862d2c4c8d7b30224938b15,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378167501538516579, guid: ad770fc94862d2c4c8d7b30224938b15,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.98599666
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378167501538516579, guid: ad770fc94862d2c4c8d7b30224938b15,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5600014
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378167501538516579, guid: ad770fc94862d2c4c8d7b30224938b15,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -1060.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2378167502597368829, guid: ad770fc94862d2c4c8d7b30224938b15,
         type: 3}
       propertyPath: FPCam
@@ -4918,6 +5183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pref_Crystal_Medium_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798842059654943212, guid: 8834eed40636d224e87d4729b4a7e021,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2189819568547555604, guid: 8834eed40636d224e87d4729b4a7e021,
         type: 3}
@@ -5311,6 +5581,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pref_Mushroom_Middle_06
       objectReference: {fileID: 0}
+    - target: {fileID: 3590054760439096788, guid: acc279797f653fe43913c05d969a30d4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 246161721244922340, guid: acc279797f653fe43913c05d969a30d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5694,6 +5969,10 @@ PrefabInstance:
     - target: {fileID: 1499556479859108, guid: 0d1d60ae93066b945aee42f6b8a505fb, type: 3}
       propertyPath: m_Name
       value: Grass_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499556479859108, guid: 0d1d60ae93066b945aee42f6b8a505fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4992286436529980, guid: 0d1d60ae93066b945aee42f6b8a505fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6227,6 +6506,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pref_Crystal_Large_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6689082042338164125, guid: 0dcb6ea366b21e043bac9205e4423bde,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8549552524972390190, guid: 0dcb6ea366b21e043bac9205e4423bde,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6344,6 +6628,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pref_Crystal_Medium_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203718583904157989, guid: b227364432e9a394089c44c8bdc4e014,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9019965117208645396, guid: b227364432e9a394089c44c8bdc4e014,
         type: 3}
@@ -11642,6 +11931,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pref_Mushroom_Middle_03
       objectReference: {fileID: 0}
+    - target: {fileID: 4665098521424191644, guid: af90bb4ff2495bc4684b7f57a37bc3ab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6450512177727701838, guid: af90bb4ff2495bc4684b7f57a37bc3ab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11745,6 +12039,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pref_Mushroom_Middle_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919914570966552826, guid: b8f80f39cd479044bbe43801ccba6001,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7046881193028211471, guid: b8f80f39cd479044bbe43801ccba6001,
         type: 3}
@@ -11954,7 +12253,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &713260871
 Transform:
@@ -12061,6 +12360,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pref_Crystal_Medium_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3967665244713004410, guid: 8b31387ec3d60ec429d7efd743677898,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2365442604055313229, guid: 8b31387ec3d60ec429d7efd743677898,
         type: 3}
@@ -12327,6 +12631,10 @@ PrefabInstance:
     - target: {fileID: 1499556479859108, guid: 0d1d60ae93066b945aee42f6b8a505fb, type: 3}
       propertyPath: m_Name
       value: Grass_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499556479859108, guid: 0d1d60ae93066b945aee42f6b8a505fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4992286436529980, guid: 0d1d60ae93066b945aee42f6b8a505fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13412,6 +13720,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pref_Crystal_Medium_03
       objectReference: {fileID: 0}
+    - target: {fileID: 3967665244713004410, guid: 7ee77b133e8cd39449978ef887eed140,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2365442604055313229, guid: 7ee77b133e8cd39449978ef887eed140,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13666,7 +13979,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &923415561
 Transform:
@@ -14189,7 +14502,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &984468299
 Transform:
@@ -14339,6 +14652,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cartoon Seaweed modul4
       objectReference: {fileID: 0}
+    - target: {fileID: 1667843000477136, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 198178523692497770, guid: a46275c0b7df533448acdb939d2a4847,
         type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
@@ -14359,6 +14676,34 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 174a39d4af1534e46bef95b52fa1b6de, type: 2}
+    - target: {fileID: 1742296150331800, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701052590362334, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798488921119926, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851276697209062, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232618020422688, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1300433294081014, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1276472715926880, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
 --- !u!1001 &994772083
@@ -14371,6 +14716,10 @@ PrefabInstance:
     - target: {fileID: 119080, guid: 47d2d80a28bbb55489e756d9d796c673, type: 3}
       propertyPath: m_Name
       value: Cartoon Seaweed 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 119080, guid: 47d2d80a28bbb55489e756d9d796c673, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 453278, guid: 47d2d80a28bbb55489e756d9d796c673, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14975,6 +15324,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pref_Mushroom_Middle_07
       objectReference: {fileID: 0}
+    - target: {fileID: 863538073775322732, guid: 37cba31581c6f504b902a7c8951db9eb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6895780371941071817, guid: 37cba31581c6f504b902a7c8951db9eb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15092,6 +15446,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pref_Crystal_Large_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689082042338164125, guid: 2c9d1e953c305ec4896289724ed68c1c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8549552524972390190, guid: 2c9d1e953c305ec4896289724ed68c1c,
         type: 3}
@@ -16715,6 +17074,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pref_Crystal_Large_05
       objectReference: {fileID: 0}
+    - target: {fileID: 4344813449193426732, guid: 0108ef550f24077409f9f53c50f74941,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6882371536631099039, guid: 0108ef550f24077409f9f53c50f74941,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17316,9 +17680,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 99473611}
     m_Modifications:
+    - target: {fileID: 1036259849633954, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1088336914985292, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
       propertyPath: m_Name
       value: Cartoon Seaweed modul1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088336914985292, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4600282876783476, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17396,6 +17768,58 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 174a39d4af1534e46bef95b52fa1b6de, type: 2}
+    - target: {fileID: 1997324127024212, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888231906382756, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420988182214958, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480727482895398, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1484695146968832, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556224610334166, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684522648684648, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618865279128604, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185673383121336, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291391365988822, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396162490982628, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365590526237834, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656010037138532, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
 --- !u!1 &1203654954 stripped
@@ -17429,6 +17853,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pref_Mushroom_Middle_07 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 863538073775322732, guid: 28cde5e1cfa3309409a8f41f5f5c07da,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6895780371941071817, guid: 28cde5e1cfa3309409a8f41f5f5c07da,
         type: 3}
@@ -17743,6 +18172,10 @@ PrefabInstance:
     - target: {fileID: 1446285176469330, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
       propertyPath: m_Name
       value: Prefab_Grass_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446285176469330, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4544453657683510, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23075,6 +23508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cartoon Seaweed 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 142206, guid: 9780aeebf3a9e0a439c8142c5343a530, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9780aeebf3a9e0a439c8142c5343a530, type: 3}
 --- !u!64 &1281177306
@@ -23266,6 +23703,10 @@ PrefabInstance:
     - target: {fileID: 111972, guid: 8a6d1976f5f383a4d8fb6bd30850df40, type: 3}
       propertyPath: m_Name
       value: Cartoon Seaweed 3.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 111972, guid: 8a6d1976f5f383a4d8fb6bd30850df40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 485316, guid: 8a6d1976f5f383a4d8fb6bd30850df40, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23695,6 +24136,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pref_Crystal_Large_05 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344813449193426732, guid: 0108ef550f24077409f9f53c50f74941,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6882371536631099039, guid: 0108ef550f24077409f9f53c50f74941,
         type: 3}
@@ -25168,6 +25614,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Grass_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1446285176469330, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4544453657683510, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 109.19999
@@ -25355,6 +25805,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pref_Crystal_Large_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344813449193426732, guid: b3ed94a05d52b7249b8fb21f1c1e145d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6882371536631099039, guid: b3ed94a05d52b7249b8fb21f1c1e145d,
         type: 3}
@@ -25792,7 +26247,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2
   m_IsActive: 1
 --- !u!4 &1397997303
 Transform:
@@ -26482,6 +26937,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pref_Crystal_Medium_03
       objectReference: {fileID: 0}
+    - target: {fileID: 3967665244713004410, guid: 066f7bb67c577c44cac6c03b127b6496,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2365442604055313229, guid: 066f7bb67c577c44cac6c03b127b6496,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27057,6 +27517,10 @@ PrefabInstance:
     - target: {fileID: 145290, guid: 8a9097f164b13ff49b55c04eb25d879c, type: 3}
       propertyPath: m_Name
       value: Cartoon Seaweed 3.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 145290, guid: 8a9097f164b13ff49b55c04eb25d879c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a9097f164b13ff49b55c04eb25d879c, type: 3}
@@ -28709,6 +29173,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pref_Crystal_Large_07
       objectReference: {fileID: 0}
+    - target: {fileID: 6385854901269610651, guid: e3e2d564a89f3f84096a320d71859ec5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5997727502992081852, guid: e3e2d564a89f3f84096a320d71859ec5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30324,6 +30793,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pref_Mushroom_Middle_07 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 863538073775322732, guid: 7f90e00c756b5844a8cfb35935bb00ab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6895780371941071817, guid: 7f90e00c756b5844a8cfb35935bb00ab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30580,6 +31054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Grass_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1446285176469330, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4544453657683510, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 85.75864
@@ -30637,6 +31115,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pref_Crystal_Medium_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 285651459869984802, guid: 5d3ca09c44965ec4ab3b467934182f19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8884534901025299747, guid: 5d3ca09c44965ec4ab3b467934182f19,
         type: 3}
@@ -31004,6 +31487,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cartoon Seaweed modul4
       objectReference: {fileID: 0}
+    - target: {fileID: 1667843000477136, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 198178523692497770, guid: a46275c0b7df533448acdb939d2a4847,
         type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
@@ -31024,6 +31511,34 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 174a39d4af1534e46bef95b52fa1b6de, type: 2}
+    - target: {fileID: 1742296150331800, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701052590362334, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798488921119926, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851276697209062, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232618020422688, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1300433294081014, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1276472715926880, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a46275c0b7df533448acdb939d2a4847, type: 3}
 --- !u!1 &1883835454 stripped
@@ -31205,6 +31720,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pref_Crystal_Medium_09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3208556786095517718, guid: ef03c8ab8680d544c84f3069965852ec,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 670942148876281962, guid: ef03c8ab8680d544c84f3069965852ec,
         type: 3}
@@ -31524,6 +32044,10 @@ PrefabInstance:
     - target: {fileID: 1446285176469330, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
       propertyPath: m_Name
       value: Prefab_Grass_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446285176469330, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4544453657683510, guid: 0df8b6a03bb9aee43a65ef1dbc436b4b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31946,6 +32470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cartoon Seaweed 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 142206, guid: 9780aeebf3a9e0a439c8142c5343a530, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9780aeebf3a9e0a439c8142c5343a530, type: 3}
 --- !u!64 &1963963318
@@ -32231,6 +32759,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pref_Crystal_Large_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385854901269610651, guid: 1699fbc51844b5e49a94b70b61c7423c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5997727502992081852, guid: 1699fbc51844b5e49a94b70b61c7423c,
         type: 3}
@@ -32635,9 +33168,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 99473611}
     m_Modifications:
+    - target: {fileID: 1036259849633954, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1088336914985292, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
       propertyPath: m_Name
       value: Cartoon Seaweed modul1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088336914985292, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4600282876783476, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32715,6 +33256,58 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 174a39d4af1534e46bef95b52fa1b6de, type: 2}
+    - target: {fileID: 1997324127024212, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888231906382756, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420988182214958, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480727482895398, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1484695146968832, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556224610334166, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684522648684648, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618865279128604, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185673383121336, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291391365988822, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396162490982628, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365590526237834, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656010037138532, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0c0c6cad399aa245a49a2a10c6696f2, type: 3}
 --- !u!1001 &2018204215
@@ -33058,6 +33651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cartoon Seaweed modul2
       objectReference: {fileID: 0}
+    - target: {fileID: 1679662760403558, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 198712149686585770, guid: b153c9338b82ebf4ba1e16f65706e725,
         type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
@@ -33067,6 +33664,38 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startSizeZ.minMaxState
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893163570455794, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1864522202424910, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924743566519092, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430904995139238, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584721858984248, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331740339025104, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358170539514254, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140127889520968, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
@@ -33325,6 +33954,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pref_Crystal_Large_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065439857739270673, guid: c734154bd9619f84f95b0784a8893567,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5749170190383168228, guid: c734154bd9619f84f95b0784a8893567,
         type: 3}
@@ -34012,6 +34646,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cartoon Seaweed modul2
       objectReference: {fileID: 0}
+    - target: {fileID: 1679662760403558, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 198712149686585770, guid: b153c9338b82ebf4ba1e16f65706e725,
         type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
@@ -34032,6 +34670,38 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 174a39d4af1534e46bef95b52fa1b6de, type: 2}
+    - target: {fileID: 1893163570455794, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1864522202424910, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924743566519092, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430904995139238, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584721858984248, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331740339025104, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358170539514254, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140127889520968, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b153c9338b82ebf4ba1e16f65706e725, type: 3}
 --- !u!4 &2101775163 stripped
@@ -35515,6 +36185,10 @@ PrefabInstance:
     - target: {fileID: 143002, guid: e17b3dcbe88ca45448257896c78efb9d, type: 3}
       propertyPath: m_Name
       value: Cartoon Seaweed 3.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 143002, guid: e17b3dcbe88ca45448257896c78efb9d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e17b3dcbe88ca45448257896c78efb9d, type: 3}
