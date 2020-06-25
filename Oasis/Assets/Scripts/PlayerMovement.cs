@@ -107,19 +107,14 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    Vector3 moveY;
+    
     void Swimming()
     {
         float moveSprint = Input.GetAxis("Vertical") * (1f + Input.GetAxis("Sprint") * acceleration / 3);
         Vector3 moveX = moveSprint * cam.GetComponent<MouseLook>().Ahead;
         Vector3 moveZ = Input.GetAxis("Horizontal") * cam.GetComponent<MouseLook>().Side;
-        if (Input.GetButtonDown("lift"))
-        {
-            moveY = new Vector3(0, Input.GetAxis("lift"), 0);
-        }
-        else moveY = new Vector3(0, 0, 0);
-        
-        move = moveX + moveY + moveZ;
+
+        move = moveX + moveZ;
         controller.Move(move * speed * Time.deltaTime);
         if (Input.GetButton("Jump"))
         {
