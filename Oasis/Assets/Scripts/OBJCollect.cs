@@ -12,6 +12,7 @@ public class OBJCollect : MonoBehaviour
     public GameObject achievement2, achievement3, achievement4, achievement5, achievement6, achievement7, achievement8, achievement9;
     public GameObject achievement1a, achievement2a, achievement3a, achievement4a, achievement5a, achievement6a, achievement7a, achievement8a, achievement9a;
     public Achievements ach;
+    public GameObject panel, endScreen;
     int achNum = 0;
 
     void Start()
@@ -39,6 +40,11 @@ public class OBJCollect : MonoBehaviour
                 if (achNum == 9)
                 {
                     GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                    Time.timeScale = 0;
+                    panel.SetActive(true);
+                    endScreen.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
             }
             if (col.name == "Achievement2")
@@ -53,6 +59,11 @@ public class OBJCollect : MonoBehaviour
                 if (achNum == 9)
                 {
                     GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                    Time.timeScale = 0;
+                    panel.SetActive(true);
+                    endScreen.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
             }
             if (col.name == "Achievement3")
@@ -67,6 +78,11 @@ public class OBJCollect : MonoBehaviour
                 if (achNum == 9)
                 {
                     GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                    Time.timeScale = 0;
+                    panel.SetActive(true);
+                    endScreen.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
             }
             if (col.name == "Achievement4")
@@ -81,6 +97,11 @@ public class OBJCollect : MonoBehaviour
                 if (achNum == 9)
                 {
                     GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                    Time.timeScale = 0;
+                    panel.SetActive(true);
+                    endScreen.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
             }
             if (col.name == "Achievement5")
@@ -95,6 +116,11 @@ public class OBJCollect : MonoBehaviour
                 if (achNum == 9)
                 {
                     GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                    Time.timeScale = 0;
+                    panel.SetActive(true);
+                    endScreen.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
             }
             if (col.name == "Achievement6")
@@ -109,6 +135,11 @@ public class OBJCollect : MonoBehaviour
                 if (achNum == 9)
                 {
                     GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                    Time.timeScale = 0;
+                    panel.SetActive(true);
+                    endScreen.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
             }
             if (col.name == "Achievement7")
@@ -123,6 +154,11 @@ public class OBJCollect : MonoBehaviour
                 if (achNum == 9)
                 {
                     GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                    Time.timeScale = 0;
+                    panel.SetActive(true);
+                    endScreen.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
             }
             if (col.name == "Achievement8")
@@ -137,6 +173,11 @@ public class OBJCollect : MonoBehaviour
                 if (achNum == 9)
                 {
                     GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                    Time.timeScale = 0;
+                    panel.SetActive(true);
+                    endScreen.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
             }
             if (col.name == "Achievement9")
@@ -151,6 +192,11 @@ public class OBJCollect : MonoBehaviour
                 if (achNum == 9)
                 {
                     GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "All Achievements Found");
+                    Time.timeScale = 0;
+                    panel.SetActive(true);
+                    endScreen.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
             }
         }
